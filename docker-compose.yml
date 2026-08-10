@@ -1,0 +1,81 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: api-ids-redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: api-ids-postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=api_ids_db
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d api_ids_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+    container_name: api-ids-backend
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - NODE_ENV=development
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=api_ids_db
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - JWT_PRIVATE_KEY_B64=LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2Z0lCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktnd2dnU2tBZ0VBQW9JQkFRRFJkdVVmZE0zTWVJUDkKdzZ3Z1puNDlWMGpBdGlPd3dIOGN3aVF0S2dmNmFUZ2JJa1pYUEtROHJGRzRxRjRsaE9LcU9aZytHcDAwODY2eQp4TGdpMjJqZE9VT2k4bExqbnVGZnBoWityOVRpbWVYclRzZXRnTUFndUxXS2MyNFVYTmFiaG40b3JXY2Nya0d4CkZtN0xBdUxFbEVxYTJjcjAxTGZKNktTTzhoSnpteGJ3VksyalhyajhtMVoxSWx6MmEzYTFqOFo5ZTJmNUwzbVoKNDhqN09XTE9xWFNnazhFck9nMkNoT2pPYnJIN0NHUGRVNnJJUVJEWUNjNkpkd2JQTzI1RWlDbUlVOUFGM0NqdgowUTdSTWpyeUM5cFJXMlRGZlc1Zm5FYUoxM0ZJSjNuZzNiYW9GVWd1Q1NjMlcrM1NyaUVXOHdmdlYyeGx3TzlqCjIyWkFleWFoQWdNQkFBRUNnZ0VBVzYvdWhVRnNvQmNVdDZ6Q0dJQ2t1NWNNV29hZndzdlFHRGVHL0ZvTW1ma2EKdlEzWXVuRHA5MEQ2bUpqaWRRdmc1K0JFR3RNdGd6TXpnajhIMXdJeHVieEtOZlphZ0JaWTByUngza3g3SkNGMwplZlBIQmRSNHhSbjFKVUIzcStRamNIcURtS3ltbVBCU0F3RXR5Q0ZnUCtvbGFmanhsUS9UejBiTldXRHU0TGowCmNpQlZCQkRGVTNKdlB1M2NScUJjd3NsdXJHTTVBR29GSVY3VnNLcW5WYmZHVWxMekZaVTNzdk1mVGd5Mjg1T3kKdEl1UmNNT3dLQXdqd2o4bFdLQWQ1ZmpoeThBclYyYjNGcWJtUVZiNU80ME8zL1dXQmhtUFYwOGlTcjYyTTkvQgo1MXp5Z0Rxd3R4QlJYdWFVWklVa0hxL0xLeHlUdXlvSVhwdUdSTVpGdlFLQmdRRHkwZXlyeU1HRWxwOVFIa1FrCldTK25oaGFxQzhaY2dObUZoVEJaWWxFbU05c0o4UTF1VVVtTTZiZWd4TnJBSDlwL21mQStzb0Q2L0J1OFBKZGYKckFwYXRkUnBVTFdlaUNZa1V2ZHVyamd6RkpMdlFUQ0p3eEhqZm02REZ0d0lPenE1SFRudXdieDh1SWVrN1VGcApXUGdrRG13N3pQcWMzMFRIckx4NGdJUjg1d0tCZ1FEYzFYdHNwSXZLYUVEVzk4OUgzRjFTOUZkeUw4ZEJTTkRXCjh5TndkVncyTmozcnFYUTdNcjlZMGxGcVZKZVJYa3JZNGhJZDNTNDVreTMrd09UblhXWHYyaU5LODVkaU1VK00KcEtaU3BmTmxLT3ZjK3lnTGJLZG90ZzNoeGczOWlmd1lYRFJDa3pwWXpwRHZPZ09DVUtFZ3BtK1BrOVVOZnNiZQp4a2lSbVZZSE53S0JnQ254Q0toRGJPbXgrcUtrRjdFUGxxT2hEWmtobjRtcTErZXdNY0crc2JXZmoxNFFQUG1wCklNTXVPNEdSZnhkZ2FTVlJPYVlhdnh5YkgwOU1SL2xHaGlOVTlQT2I5VU1FMFZIRTR1aERQNEhUTSs0UG5JcXYKSHcva2JzSkYySXV6YjFrNkt4K0taenhEdzJwQmNPTDVjeU1IT3JxNWxUQXpnSFhjNkZFSUlkcFJBb0dCQUo0NQpKeEdVWThSR0pnN2Z4dGdKLzZPc0JldCthQmxTZnE5RHphU0pzZVAxd1MvVVhiNzhnVFMybkRhL0hVbStjWW9yCmtDZHRqZTBha3Qzd2Z4RjJUYzhvVUJrbnB0Tm4yVU0veFJ0Nlk0V2JhRU1RZ0lTTytQT0JYVGppbXF1SjdlSFcKVG10VTZYMHZvNUNEMUhmT0pXUXJXOHRYZEZNUy9wSW5KMStLcWFUSkFvR0JBSThEOGNmNERtaXhZY2E1RytDRwpVZFhyajBBdWlaYlA2WW5qcE1pd3l3M1hDRE5jYThtTFlFR1hwcnBlL0Qxd3lVNmlpNW1abWhUOVZ1ZEF1TkYzClhWMzd2aVFUanhYdjk1bmZkbUI0VkV2UmIzdXBPeW5XZm5rSk1GeXZ1SW5IQnIxb2l4T2g0SjVlbHV3aGhlMGkKaWRUcHpJcTZZM0lGdHFLd0t2ZEZMemtoCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:4000/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    restart: unless-stopped
+
+  gateway:
+    build:
+      context: ./gateway
+    container_name: api-ids-gateway
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - NODE_ENV=development
+      - BACKEND_URL=http://backend:4000
+      - REDIS_URL=redis://redis:6379
+      - JWT_PUBLIC_KEY_B64=LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUEwWGJsSDNUTnpIaUQvY09zSUdaKwpQVmRJd0xZanNNQi9ITUlrTFNvSCttazRHeUpHVnp5a1BLeFJ1S2hlSllUaXFqbVlQaHFkTlBPdXNzUzRJdHRvCjNUbERvdkpTNDU3aFg2WVdmcS9VNHBubDYwN0hyWURBSUxpMWluTnVGRnpXbTRaK0tLMW5ISzVCc1JadXl3TGkKeEpSS210bks5TlMzeWVpa2p2SVNjNXNXOEZTdG8xNjQvSnRXZFNKYzltdDJ0WS9HZlh0bitTOTVtZVBJK3psaQp6cWwwb0pQQkt6b05nb1Rvem02eCt3aGozVk9xeUVFUTJBbk9pWGNHenp0dVJJZ3BpRlBRQmR3bzc5RU8wVEk2CjhndmFVVnRreFgxdVg1eEdpZGR4U0NkNTROMjJxQlZJTGdrbk5sdnQwcTRoRnZNSDcxZHNaY0R2WTl0bVFIc20Kb1FJREFRQUIKLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0tCg==
+    depends_on:
+      redis:
+        condition: service_healthy
+      backend:
+        condition: service_healthy
+    volumes:
+      - ./gateway/logs:/app/logs
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    restart: unless-stopped

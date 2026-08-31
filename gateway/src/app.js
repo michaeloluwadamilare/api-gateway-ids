@@ -6,6 +6,7 @@ const healthRoutes = require('./routes/health');
 const jwtEnforcement = require('./middleware/jwtEnforcement');
 const { compositeState } = require('./middleware/compositeState');
 const injectionDetection = require('./middleware/injectionDetection');
+const { enumerationDetection } = require('./middleware/enumerationDetection');
 const proxy = require('./proxy');
 
 function createApp() {
@@ -21,6 +22,7 @@ function createApp() {
   app.use(jwtEnforcement);
   app.use(compositeState);
   app.use(injectionDetection);
+  app.use(enumerationDetection);
   app.use(proxy);
 
   return app;

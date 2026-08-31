@@ -118,15 +118,36 @@ curl -i "http://localhost:8080/api/transactions/search?q=Tesco" -H "Authorizatio
 
 # malicious query (R1 SQL/NoSQL injection signature) -> 403, blocked at the gateway
 curl -i "http://localhost:8080/api/transactions/search?q=' OR '1'='1" -H "Authorization: Bearer $TOKEN"
+
+# R5 (BOLA/ID enumeration) - detect-only: all three still return 200/404 as
+# normal, but the third request onward logs a "detected" R5 event
+curl -s -o /dev/null -w "%{http_code}\n" http://localhost:8080/api/users/1 -H "Authorization: Bearer $TOKEN"
+curl -s -o /dev/null -w "%{http_code}\n" http://localhost:8080/api/users/2 -H "Authorization: Bearer $TOKEN"
+curl -s -o /dev/null -w "%{http_code}\n" http://localhost:8080/api/users/3 -H "Authorization: Bearer $TOKEN"
 ```
 
 The blocked request never reaches the backend (no corresponding line in the
 backend's own logs for that `X-Request-Id`), while the legitimate one does -
-that contrast is the demo. Check `gateway/logs/security.log` for the JSON
-security events (JWT rejections and R1 blocks, each with rule id, composite
-identity, and action taken), and `redis-cli KEYS '*'` (or
-`docker compose exec redis redis-cli KEYS '*'`) to see the per-identity
-request counters and R1 score building up.
+that contrast is the demo. R5 is deliberately different: it never blocks,
+only observes - see `docs/composite-identity.md` for why. Check
+`gateway/logs/security.log` for the JSON security events (JWT rejections,
+R1 blocks, R5 detections, each with rule id, composite identity, and action
+taken), and `redis-cli KEYS '*'` (or `docker compose exec redis redis-cli
+KEYS '*'`) to see the per-identity request counters and rule scores
+building up.
+
+## Running the tests
+
+```bash
+cd gateway
+npm test
+```
+
+A Jest suite covering JWT verification (valid/expired/tampered/forged
+tokens), R1's signature matching and block decision, R5's sequential-run
+heuristic, and Redis-backed composite scoring - all mocked at the Redis
+client boundary, so it runs without a live Redis instance or containers.
+See `docs/implementation-draft.md` §4.7 for what is and isn't covered.
 
 ## Next up
 

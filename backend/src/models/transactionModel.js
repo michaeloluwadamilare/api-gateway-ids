@@ -16,8 +16,7 @@ async function addTransaction({ accountId, amount, description }) {
   return result.rows[0];
 }
 
-// Free-text query param, deliberately unsanitised beyond basic type checks -
-// this is the injection target (R1) from Table 4 of the proposal.
+// Free-text query param, deliberately unsanitised - the injection target.
 async function searchTransactions(query) {
   if (!query) {
     const result = await pool.query(

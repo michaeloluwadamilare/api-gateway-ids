@@ -2,13 +2,11 @@ const { matchInjectionSignature } = require('../security/injectionSignatures');
 const { logSecurityEvent } = require('../security/securityLogger');
 const { recordRuleTrigger } = require('./compositeState');
 
-const R1_WEIGHT = 50; // Table 2, Dissertation Proposal
+const R1_WEIGHT = 50;
 
 function buildInspectionText(req) {
-  // req.originalUrl is still percent-encoded (raw as received) - decode it
-  // so signatures match the actual characters an attacker sent, not their
-  // %XX escapes. req.query is already decoded by Express's query parser,
-  // included too as a safety net for anything decodeURIComponent chokes on.
+  // req.originalUrl is still percent-encoded - decode it so signatures
+  // match the actual characters sent, not their %XX escapes.
   let decodedUrl = req.originalUrl;
   try {
     decodedUrl = decodeURIComponent(req.originalUrl);
@@ -18,9 +16,6 @@ function buildInspectionText(req) {
   return `${decodedUrl} ${JSON.stringify(req.query || {})} ${JSON.stringify(req.body || {})}`;
 }
 
-// R1: SQL/NoSQL injection (Table 2). Inspects the URL, query string, and
-// JSON body - the request is fully formed by the time this runs (after
-// jwtEnforcement + compositeState), so req.identity is already set.
 async function injectionDetection(req, res, next) {
   const inspectionText = buildInspectionText(req);
   const matchedSignature = matchInjectionSignature(inspectionText);

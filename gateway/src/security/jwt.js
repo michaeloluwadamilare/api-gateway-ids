@@ -10,11 +10,8 @@ function loadPublicKey() {
 
 const publicKey = loadPublicKey();
 
-// Categorises jsonwebtoken's verify() failures so security events say what
-// actually happened (expired vs an outright forged/tampered token) instead
-// of a generic "unauthorized". Restricting `algorithms` to RS256 is itself
-// the RFC 8725 fix for `none`-alg and RS256/HS256 confusion attacks - both
-// surface here as 'invalid signature' or 'disallowed algorithm'.
+// Pinning `algorithms` to RS256 is the RFC 8725 fix for `none`-alg and
+// RS256/HS256 confusion attacks - both are rejected here before decoding.
 function verifyToken(token) {
   try {
     const decoded = jwt.verify(token, publicKey, { algorithms: ['RS256'] });

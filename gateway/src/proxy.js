@@ -7,9 +7,7 @@ module.exports = createProxyMiddleware({
   logLevel: 'warn',
   onProxyReq(proxyReq, req) {
     if (req.id) proxyReq.setHeader('X-Request-Id', req.id);
-    // express.json() upstream already consumed the body stream (needed for
-    // R1's body inspection) - fixRequestBody re-serialises req.body onto
-    // the proxied request so the backend still receives it.
+    // express.json() upstream already consumed the body stream - re-serialise it.
     fixRequestBody(proxyReq, req);
   },
   onError(err, req, res) {

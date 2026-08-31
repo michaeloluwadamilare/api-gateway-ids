@@ -1,12 +1,4 @@
-/**
- * Static OpenAPI 3.0 description of the stub backend's routes.
- *
- * Kept as a plain JS object (not YAML) so no extra parsing dependency is
- * needed - swagger-ui-express can serve this directly. Mirrors the route
- * behaviour in src/routes/*.js and the attack-category mapping in
- * docs/api-endpoints.md; update both together if a route changes.
- */
-
+// Plain JS object rather than YAML - swagger-ui-express serves it directly.
 const errorSchema = {
   type: 'object',
   properties: {
@@ -45,9 +37,7 @@ const transactionSchema = {
   },
 };
 
-// Returned by the gateway itself, not this backend - it never forwards the
-// request (gateway/src/middleware/jwtEnforcement.js). Documented here since
-// this is the only OpenAPI surface either service has.
+// Returned by the gateway, not this backend - documented here since it's the only spec either service has.
 const unauthorizedResponse = {
   description: 'Missing, invalid, expired, or wrong-algorithm JWT - rejected by the gateway before reaching this route',
   content: {
@@ -66,8 +56,7 @@ const unauthorizedResponse = {
   },
 };
 
-// Also returned by the gateway (gateway/src/middleware/injectionDetection.js),
-// not this backend - R1 blocks before the request ever proxies through.
+// Also returned by the gateway, not this backend.
 const injectionBlockedResponse = {
   description: 'Request matched an R1 SQL/NoSQL injection signature - blocked by the gateway before reaching this route',
   content: {

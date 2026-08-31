@@ -16,9 +16,16 @@ injection) against the URL, query string, and JSON body of every request
 that passes JWT enforcement (`gateway/src/middleware/injectionDetection.js`).
 JWT enforcement checks *possession of a valid token only* - it deliberately
 does **not** check resource ownership, so the BOLA gaps below (`GET
-/api/users/:id`, `/api/accounts/:id`) are still open, reserved for the
-future R5 rule. The mapping below is what each endpoint is *for*, once the
-remaining rules (R2 as a scored rule, R3-R5, Table 2 of the proposal) exist
+/api/users/:id`, `/api/accounts/:id`) are still open on purpose.
+
+R5 (BOLA/ID enumeration) now runs in **detect-only** mode on the routes
+below marked with a numeric `:id` (`gateway/src/middleware/enumerationDetection.js`):
+three consecutive requests for ascending IDs from the same composite
+identity are logged and scored (+35, Table 2), but the request is never
+blocked - a legitimate user paging through their own resources can produce
+the same shape, so this needs calibration against real traffic before it's
+safe to enforce. The mapping below is what each endpoint is *for*, once the
+remaining rules (R2 as a scored rule, R3-R4, Table 2 of the proposal) exist
 to act on it.
 
 All routes are reachable two ways during this phase:
@@ -52,12 +59,4 @@ construction (`gateway/src/security/jwt.js`).
 | 2       | bob@example.com      | Password123!   | 2          |
 | 3       | chloe@example.com    | Password123!   | 3          |
 
-## Not yet in scope
 
-- R2 as a scored/composite-identity rule (JWT enforcement itself is live,
-  but it doesn't yet increment a cumulative score the way R1 does)
-- R3 (rate/brute-force), R4 (credential stuffing), R5 (BOLA enumeration)
-- Four-tier policy escalation (monitor/challenge/throttle/block) - Redis
-  currently only stores per-identity request counts and the R1 score, no
-  tier logic reads them yet
-- PostgreSQL audit log (Prisma)

@@ -15,8 +15,6 @@ async function register(req, res, next) {
       return res.status(409).json({ error: 'an account with that email already exists' });
     }
 
-    // Not persisted - this stub only needs to exist so the endpoint shape is
-    // testable, the seeded users in database cover the login/brute-force cases.
     return res.status(201).json({ message: 'account created', email });
   } catch (err) {
     next(err);

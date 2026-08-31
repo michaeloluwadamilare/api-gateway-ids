@@ -1,8 +1,6 @@
 const { findUserById } = require('../models/userModel');
 
-// Sequential, guessable IDs are deliberate here - this is the BOLA
-// enumeration target described in Table 4 (no ownership check is performed
-// on purpose; that check is the gateway's R5 rule, not this stub's job).
+// No ownership check on purpose - the BOLA/enumeration target.
 async function getUserById(req, res, next) {
   try {
     const user = await findUserById(req.params.id);

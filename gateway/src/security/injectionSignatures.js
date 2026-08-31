@@ -1,6 +1,4 @@
-// Curated, OWASP-CRS-inspired signature set for R1 (Table 2). Not the full
-// CRS ruleset - a focused subset covering the classic SQL/NoSQL injection
-// shapes used by the attack simulation tooling (Table 4: Burp Suite payloads).
+// Curated, OWASP-CRS-inspired subset, not the full ruleset.
 const SIGNATURES = [
   { id: 'sql-union-select', regex: /\bunion\b[\s\S]{0,40}\bselect\b/i },
   { id: 'sql-tautology', regex: /\bor\b\s+['"]?\d+['"]?\s*=\s*['"]?\d+['"]?/i },

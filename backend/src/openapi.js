@@ -1,4 +1,3 @@
-// Plain JS object rather than YAML - swagger-ui-express serves it directly.
 const errorSchema = {
   type: 'object',
   properties: {
@@ -37,7 +36,7 @@ const transactionSchema = {
   },
 };
 
-// Returned by the gateway, not this backend - documented here since it's the only spec either service has.
+// Returned by the gateway, not this backend
 const unauthorizedResponse = {
   description: 'Missing, invalid, expired, or wrong-algorithm JWT - rejected by the gateway before reaching this route',
   content: {

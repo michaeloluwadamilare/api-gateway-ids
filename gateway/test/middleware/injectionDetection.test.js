@@ -1,14 +1,17 @@
 const mockRedisClient = {
-  incr: jest.fn(),
-  incrBy: jest.fn().mockResolvedValue(50),
+  incrBy: jest.fn(),
   expire: jest.fn(),
 };
-jest.mock('../../src/redisClient', () => ({ redisClient: mockRedisClient }));
 
 const mockLogSecurityEvent = jest.fn();
-jest.mock('../../src/security/securityLogger', () => ({ logSecurityEvent: mockLogSecurityEvent }));
 
-const injectionDetection = require('../../src/middleware/injectionDetection');
+function loadInjectionDetection(mode) {
+  jest.resetModules();
+  jest.doMock('../../src/redisClient', () => ({ redisClient: mockRedisClient }));
+  jest.doMock('../../src/security/securityLogger', () => ({ logSecurityEvent: mockLogSecurityEvent }));
+  jest.doMock('../../src/scoring', () => ({ ruleWeights: { R1: 50 }, mode, disabledRules: new Set() }));
+  return require('../../src/middleware/injectionDetection');
+}
 
 function makeReqRes({ path = '/api/transactions/search', query = {}, body = {} } = {}) {
   const req = {
@@ -19,6 +22,7 @@ function makeReqRes({ path = '/api/transactions/search', query = {}, body = {} }
     originalUrl: path,
     query,
     body,
+    triggeredRules: [],
   };
   const res = {
     status: jest.fn().mockReturnThis(),
@@ -34,8 +38,13 @@ beforeEach(() => {
 });
 
 describe('injectionDetection middleware (R1) - allow path', () => {
+  const injectionDetection = loadInjectionDetection('adaptive');
+
   test('lets a legitimate query through untouched', async () => {
-    const { req, res, next } = makeReqRes({ path: '/api/transactions/search?q=Tesco', query: { q: 'Tesco' } });
+    const { req, res, next } = makeReqRes({
+      path: '/api/transactions/search?q=Tesco',
+      query: { q: 'Tesco' },
+    });
 
     await injectionDetection(req, res, next);
 
@@ -57,7 +66,9 @@ describe('injectionDetection middleware (R1) - allow path', () => {
   });
 });
 
-describe('injectionDetection middleware (R1) - block path', () => {
+describe('injectionDetection middleware (R1) - static mode (Condition B): blocks immediately', () => {
+  const injectionDetection = loadInjectionDetection('static');
+
   test('blocks a tautology payload in the query string with 403', async () => {
     const { req, res, next } = makeReqRes({
       path: "/api/transactions/search?q=' OR '1'='1",
@@ -124,5 +135,46 @@ describe('injectionDetection middleware (R1) - block path', () => {
         score: 50,
       })
     );
+  });
+});
+
+describe('injectionDetection middleware (R1) - adaptive mode (Condition C): scores, does not block alone', () => {
+  const injectionDetection = loadInjectionDetection('adaptive');
+
+  test('records the R1 weight and forwards the request instead of blocking', async () => {
+    const { req, res, next } = makeReqRes({
+      path: "/api/transactions/search?q=' OR '1'='1",
+      query: { q: "' OR '1'='1" },
+    });
+
+    await injectionDetection(req, res, next);
+
+    expect(mockRedisClient.incrBy).toHaveBeenCalledWith('idscore:203.0.113.4:1', 50);
+    expect(res.status).not.toHaveBeenCalled();
+    expect(next).toHaveBeenCalledWith();
+  });
+
+  test('logs the trigger with action "scored" rather than "blocked"', async () => {
+    const { req, res, next } = makeReqRes({
+      path: "/api/transactions/search?q=' OR '1'='1",
+      query: { q: "' OR '1'='1" },
+    });
+
+    await injectionDetection(req, res, next);
+
+    expect(mockLogSecurityEvent).toHaveBeenCalledWith(expect.objectContaining({ action: 'scored' }));
+  });
+
+  test('appends the trigger to req.triggeredRules for the audit logger', async () => {
+    const { req, res, next } = makeReqRes({
+      path: "/api/transactions/search?q=' OR '1'='1",
+      query: { q: "' OR '1'='1" },
+    });
+
+    await injectionDetection(req, res, next);
+
+    expect(req.triggeredRules).toEqual([
+      expect.objectContaining({ ruleId: 'R1', weight: 50, signature: 'sql-tautology' }),
+    ]);
   });
 });

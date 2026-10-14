@@ -1,0 +1,16 @@
+_format_version: "3.0"
+_comment: >
+  Kong Community Edition, DB-less declarative config 
+  
+services:
+  - name: backend
+    url: http://backend:4000
+    routes:
+      - name: backend-route
+        paths:
+          - /
+    plugins:
+      - name: rate-limiting
+        config:
+          minute: 120
+          policy: local

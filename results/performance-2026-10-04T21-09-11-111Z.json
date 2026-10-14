@@ -1,0 +1,5244 @@
+{
+  "generatedAt": "2026-10-04T20:32:45.145Z",
+  "engine": "k6",
+  "concurrencyLevels": [
+    1,
+    5,
+    10,
+    25
+  ],
+  "durationMs": 30000,
+  "warmupMs": 5000,
+  "repeatCount": 3,
+  "tokenPoolSize": 500,
+  "cpuLimit": "2.0 cores per container (docker-compose.yml cpus:)",
+  "armOrderRandomizedPerConcurrencyLevel": true,
+  "arms": [
+    {
+      "id": "A",
+      "label": "unprotected (direct backend)",
+      "points": [
+        {
+          "concurrency": 1,
+          "repeatCount": 3,
+          "throughputRpsMedian": 791.4131770260652,
+          "throughputRpsIqr": [
+            180.57734356262768,
+            1249.6651849252487
+          ],
+          "throughputRpsMean": 740.5519018379806,
+          "throughputRpsStddev": 536.3556237447929,
+          "p50LatencyMsMedian": 0.678,
+          "p95LatencyMsMedian": 2.602,
+          "p95LatencyMsIqr": [
+            0.947,
+            15.486399999999977
+          ],
+          "p95LatencyMsMean": 6.345133333333326,
+          "p95LatencyMsStddev": 7.959699960006854,
+          "meanCpuPercentMedian": 51.191538461538464,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 1,
+              "requestCount": 37492,
+              "throughputRps": 1249.6651849252487,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 0.665,
+              "p95LatencyMs": 0.947,
+              "p99LatencyMs": 1.9364399999999948,
+              "meanLatencyMs": 0.7322289021657886,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 44.11,
+                    "memUsage": "29.47MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 43.97,
+                    "memUsage": "29.48MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 40.73,
+                    "memUsage": "29.33MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 47.09,
+                    "memUsage": "29.57MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 49.2,
+                    "memUsage": "29.56MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 41.16,
+                    "memUsage": "29.74MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 43.7,
+                    "memUsage": "29.47MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 50.18,
+                    "memUsage": "29.65MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 53.73,
+                    "memUsage": "29.95MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 39.94,
+                    "memUsage": "29.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 46.12,
+                    "memUsage": "29.85MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 48.16,
+                    "memUsage": "29.46MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 45.51,
+                    "memUsage": "29.31MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 12.56,
+                    "memUsage": "28.92MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 43.29714285714285,
+                "maxCpuPercent": 53.73,
+                "lastMemUsage": "28.92MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 1,
+              "requestCount": 23750,
+              "throughputRps": 791.4131770260652,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 0.678,
+              "p95LatencyMs": 2.602,
+              "p99LatencyMs": 10.26402,
+              "meanLatencyMs": 1.1602338947368485,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 42.12,
+                    "memUsage": "29.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 40.66,
+                    "memUsage": "29.43MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 40.66,
+                    "memUsage": "29.55MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 53.69,
+                    "memUsage": "29.23MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 42,
+                    "memUsage": "30MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 41.7,
+                    "memUsage": "29.53MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 42.59,
+                    "memUsage": "29.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 46.64,
+                    "memUsage": "29.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 60.79,
+                    "memUsage": "29.5MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 70.84,
+                    "memUsage": "29.89MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 63.58,
+                    "memUsage": "29.43MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 97.58,
+                    "memUsage": "29.76MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 22.64,
+                    "memUsage": "29.22MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 51.191538461538464,
+                "maxCpuPercent": 97.58,
+                "lastMemUsage": "29.22MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 1,
+              "requestCount": 5418,
+              "throughputRps": 180.57734356262768,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.6804999999999999,
+              "p95LatencyMs": 15.486399999999977,
+              "p99LatencyMs": 60.99719999999993,
+              "meanLatencyMs": 5.316985234403837,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 93.69,
+                    "memUsage": "28.75MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 64.9,
+                    "memUsage": "28.82MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 91.2,
+                    "memUsage": "29.62MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 103.65,
+                    "memUsage": "29.28MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.96,
+                    "memUsage": "29.36MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 135.69,
+                    "memUsage": "29.3MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 67.02,
+                    "memUsage": "29.82MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 61.59,
+                    "memUsage": "29.3MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 78.65,
+                    "memUsage": "29.33MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 70.69,
+                    "memUsage": "29.04MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 88.904,
+                "maxCpuPercent": 135.69,
+                "lastMemUsage": "29.04MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:34:35.719Z",
+            "note": "no gateway in this arm - direct backend"
+          }
+        },
+        {
+          "concurrency": 5,
+          "repeatCount": 3,
+          "throughputRpsMedian": 2055.959056537308,
+          "throughputRpsIqr": [
+            1866.921460077701,
+            2387.326839226595
+          ],
+          "throughputRpsMean": 2103.402451947201,
+          "throughputRpsStddev": 263.42664346605227,
+          "p50LatencyMsMedian": 1.732,
+          "p95LatencyMsMedian": 5.279,
+          "p95LatencyMsIqr": [
+            3.855,
+            5.885399999999997
+          ],
+          "p95LatencyMsMean": 5.0064666666666655,
+          "p95LatencyMsStddev": 1.0422748453902795,
+          "meanCpuPercentMedian": 116.50538461538461,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 5,
+              "requestCount": 56013,
+              "throughputRps": 1866.921460077701,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.876,
+              "p95LatencyMs": 5.885399999999997,
+              "p99LatencyMs": 12.532039999999995,
+              "meanLatencyMs": 2.6160013211218445,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 132.24,
+                    "memUsage": "29.41MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 109.13,
+                    "memUsage": "29.17MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.6,
+                    "memUsage": "29.51MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.94,
+                    "memUsage": "29.65MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.62,
+                    "memUsage": "29.16MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.53,
+                    "memUsage": "29.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 115.93,
+                    "memUsage": "29.12MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.83,
+                    "memUsage": "29.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.39,
+                    "memUsage": "29.55MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.08,
+                    "memUsage": "29.85MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 112.68,
+                    "memUsage": "29.25MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.28,
+                    "memUsage": "29.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.77,
+                    "memUsage": "29.02MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 119.92461538461538,
+                "maxCpuPercent": 132.24,
+                "lastMemUsage": "29.02MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 5,
+              "requestCount": 71625,
+              "throughputRps": 2387.326839226595,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.732,
+              "p95LatencyMs": 3.855,
+              "p99LatencyMs": 6.916759999999999,
+              "meanLatencyMs": 2.046346973821973,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 106.67,
+                    "memUsage": "28.64MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 115.53,
+                    "memUsage": "29.25MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.64,
+                    "memUsage": "28.7MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.65,
+                    "memUsage": "29.12MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.02,
+                    "memUsage": "29.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.21,
+                    "memUsage": "29.81MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.8,
+                    "memUsage": "29.07MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.98,
+                    "memUsage": "29.35MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 115.16,
+                    "memUsage": "28.64MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.91,
+                    "memUsage": "29.26MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 113.56,
+                    "memUsage": "28.98MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.62,
+                    "memUsage": "29.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.82,
+                    "memUsage": "29.45MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 116.50538461538461,
+                "maxCpuPercent": 123.65,
+                "lastMemUsage": "29.45MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 5,
+              "requestCount": 61684,
+              "throughputRps": 2055.959056537308,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.732,
+              "p95LatencyMs": 5.279,
+              "p99LatencyMs": 11.819929999999983,
+              "meanLatencyMs": 2.3756615167628383,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 106.98,
+                    "memUsage": "29.34MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.51,
+                    "memUsage": "29.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.76,
+                    "memUsage": "29.23MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.85,
+                    "memUsage": "29.12MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.87,
+                    "memUsage": "29.52MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.78,
+                    "memUsage": "29.42MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.49,
+                    "memUsage": "29.11MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.72,
+                    "memUsage": "29.29MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 129.91,
+                    "memUsage": "29.12MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 113.16,
+                    "memUsage": "29.31MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.07,
+                    "memUsage": "29.24MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.33,
+                    "memUsage": "29.88MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.75,
+                    "memUsage": "29.38MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 13.48,
+                    "memUsage": "28.84MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 110.90428571428572,
+                "maxCpuPercent": 129.91,
+                "lastMemUsage": "28.84MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:48:45.175Z",
+            "note": "no gateway in this arm - direct backend"
+          }
+        },
+        {
+          "concurrency": 10,
+          "repeatCount": 3,
+          "throughputRpsMedian": 3200.0351444900516,
+          "throughputRpsIqr": [
+            2578.5308483763465,
+            3346.8303102204895
+          ],
+          "throughputRpsMean": 3041.798767695629,
+          "throughputRpsStddev": 407.860367004775,
+          "p50LatencyMsMedian": 2.736,
+          "p95LatencyMsMedian": 5.36,
+          "p95LatencyMsIqr": [
+            4.976,
+            7.41
+          ],
+          "p95LatencyMsMean": 5.915333333333333,
+          "p95LatencyMsStddev": 1.3085814202155452,
+          "meanCpuPercentMedian": 112.45285714285714,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 10,
+              "requestCount": 96007,
+              "throughputRps": 3200.0351444900516,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 2.736,
+              "p95LatencyMs": 5.36,
+              "p99LatencyMs": 9.163759999999996,
+              "meanLatencyMs": 3.082603997625145,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 111.78,
+                    "memUsage": "29.57MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.14,
+                    "memUsage": "29.65MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.97,
+                    "memUsage": "29.46MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 115.71,
+                    "memUsage": "29.84MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.83,
+                    "memUsage": "29.65MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.1,
+                    "memUsage": "29.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.84,
+                    "memUsage": "29.61MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.15,
+                    "memUsage": "29.91MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.97,
+                    "memUsage": "29.15MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.62,
+                    "memUsage": "29.87MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.69,
+                    "memUsage": "29.54MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.3,
+                    "memUsage": "29.54MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.46,
+                    "memUsage": "29.02MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 24.76,
+                    "memUsage": "29.34MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 111.1657142857143,
+                "maxCpuPercent": 121.62,
+                "lastMemUsage": "29.34MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 10,
+              "requestCount": 77361,
+              "throughputRps": 2578.5308483763465,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 2.918,
+              "p95LatencyMs": 7.41,
+              "p99LatencyMs": 19.271599999999985,
+              "meanLatencyMs": 3.8245539354455422,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 112.44,
+                    "memUsage": "29.32MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.14,
+                    "memUsage": "29.81MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.12,
+                    "memUsage": "30.3MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.19,
+                    "memUsage": "29.25MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.8,
+                    "memUsage": "29.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 147.02,
+                    "memUsage": "29.19MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.28,
+                    "memUsage": "29.53MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.64,
+                    "memUsage": "29.15MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126,
+                    "memUsage": "29.95MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.64,
+                    "memUsage": "29.11MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 115.99,
+                    "memUsage": "29.36MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.01,
+                    "memUsage": "29.25MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.42,
+                    "memUsage": "29.19MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 120.89923076923077,
+                "maxCpuPercent": 147.02,
+                "lastMemUsage": "29.19MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 10,
+              "requestCount": 100415,
+              "throughputRps": 3346.8303102204895,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 2.643,
+              "p95LatencyMs": 4.976,
+              "p99LatencyMs": 7.808719999999998,
+              "meanLatencyMs": 2.945657322113258,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 117.08,
+                    "memUsage": "28.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.4,
+                    "memUsage": "29.77MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.2,
+                    "memUsage": "29.57MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.94,
+                    "memUsage": "29.87MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.21,
+                    "memUsage": "29.71MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 114.53,
+                    "memUsage": "29.7MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.67,
+                    "memUsage": "29.21MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.49,
+                    "memUsage": "29.23MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 114.21,
+                    "memUsage": "29.19MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.03,
+                    "memUsage": "29.36MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.04,
+                    "memUsage": "29.35MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.51,
+                    "memUsage": "29.12MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 128.59,
+                    "memUsage": "29.99MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 34.44,
+                    "memUsage": "28.85MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 112.45285714285714,
+                "maxCpuPercent": 128.59,
+                "lastMemUsage": "28.85MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:50:24.495Z",
+            "note": "no gateway in this arm - direct backend"
+          }
+        },
+        {
+          "concurrency": 25,
+          "repeatCount": 3,
+          "throughputRpsMedian": 2279.9679012938127,
+          "throughputRpsIqr": [
+            2240.7119196696262,
+            2394.439784915213
+          ],
+          "throughputRpsMean": 2305.0398686262174,
+          "throughputRpsStddev": 79.87187738922367,
+          "p50LatencyMsMedian": 9.212,
+          "p95LatencyMsMedian": 19.389199999999995,
+          "p95LatencyMsIqr": [
+            17.210799999999992,
+            19.991249999999997
+          ],
+          "p95LatencyMsMean": 18.863749999999992,
+          "p95LatencyMsStddev": 1.4628051228718089,
+          "meanCpuPercentMedian": 118.50846153846153,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 25,
+              "requestCount": 68416,
+              "throughputRps": 2279.9679012938127,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 9.212,
+              "p95LatencyMs": 19.991249999999997,
+              "p99LatencyMs": 31.531649999999985,
+              "meanLatencyMs": 10.878771632366798,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 104.13,
+                    "memUsage": "29.71MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.14,
+                    "memUsage": "29.88MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.23,
+                    "memUsage": "29.88MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.64,
+                    "memUsage": "29.29MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.02,
+                    "memUsage": "30.12MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.58,
+                    "memUsage": "29.34MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.04,
+                    "memUsage": "30.46MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.47,
+                    "memUsage": "29.26MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.81,
+                    "memUsage": "30.07MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.01,
+                    "memUsage": "29.21MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.79,
+                    "memUsage": "29.24MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.03,
+                    "memUsage": "29.55MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.72,
+                    "memUsage": "28.36MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 118.50846153846153,
+                "maxCpuPercent": 122.04,
+                "lastMemUsage": "28.36MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 25,
+              "requestCount": 71869,
+              "throughputRps": 2394.439784915213,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 8.922,
+              "p95LatencyMs": 17.210799999999992,
+              "p99LatencyMs": 33.95143999999999,
+              "meanLatencyMs": 10.376532204427454,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 111.1,
+                    "memUsage": "29.16MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.58,
+                    "memUsage": "29.33MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.4,
+                    "memUsage": "29.07MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.14,
+                    "memUsage": "29.14MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.19,
+                    "memUsage": "29.51MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.23,
+                    "memUsage": "29.07MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.26,
+                    "memUsage": "29.49MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.12,
+                    "memUsage": "29.5MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.94,
+                    "memUsage": "29.67MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.54,
+                    "memUsage": "30.38MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.29,
+                    "memUsage": "28.68MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.11,
+                    "memUsage": "29.41MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.35,
+                    "memUsage": "30.89MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 16.88,
+                    "memUsage": "28.79MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 112.00928571428571,
+                "maxCpuPercent": 125.29,
+                "lastMemUsage": "28.79MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 25,
+              "requestCount": 67237,
+              "throughputRps": 2240.7119196696262,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 9.434,
+              "p95LatencyMs": 19.389199999999995,
+              "p99LatencyMs": 35.048679999999976,
+              "meanLatencyMs": 11.076089429927023,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 113.19,
+                    "memUsage": "29.81MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.47,
+                    "memUsage": "28.96MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.5,
+                    "memUsage": "29.95MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.1,
+                    "memUsage": "30.39MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.5,
+                    "memUsage": "29.03MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.65,
+                    "memUsage": "28.76MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.84,
+                    "memUsage": "29.55MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.12,
+                    "memUsage": "28.62MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.49,
+                    "memUsage": "29.16MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.96,
+                    "memUsage": "29.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.65,
+                    "memUsage": "29.58MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.02,
+                    "memUsage": "29.57MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.29,
+                    "memUsage": "28.6MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 119.59846153846154,
+                "maxCpuPercent": 124.65,
+                "lastMemUsage": "28.6MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:59:12.974Z",
+            "note": "no gateway in this arm - direct backend"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gateway-bare",
+      "label": "gateway, all 5 rules disabled (proxy + composite-state overhead only, no crypto)",
+      "points": [
+        {
+          "concurrency": 1,
+          "repeatCount": 3,
+          "throughputRpsMedian": 651.932353293805,
+          "throughputRpsIqr": [
+            607.2615049438747,
+            715.3040305390999
+          ],
+          "throughputRpsMean": 658.1659629255932,
+          "throughputRpsStddev": 54.29033294270599,
+          "p50LatencyMsMedian": 1.203,
+          "p95LatencyMsMedian": 2.3912999999999975,
+          "p95LatencyMsIqr": [
+            2.006,
+            2.892
+          ],
+          "p95LatencyMsMean": 2.4297666666666657,
+          "p95LatencyMsStddev": 0.4442507887818923,
+          "meanCpuPercentMedian": 69.06357142857141,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 1,
+              "requestCount": 19559,
+              "throughputRps": 651.932353293805,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.203,
+              "p95LatencyMs": 2.3912999999999975,
+              "p99LatencyMs": 4.84842,
+              "meanLatencyMs": 1.4496497264686374,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 86.3,
+                    "memUsage": "36.03MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 70.21,
+                    "memUsage": "36.16MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 81.72,
+                    "memUsage": "36.02MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 71.5,
+                    "memUsage": "36.62MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.8,
+                    "memUsage": "36.29MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 71.73,
+                    "memUsage": "36.03MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 70.2,
+                    "memUsage": "36.58MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.66,
+                    "memUsage": "36.14MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.46,
+                    "memUsage": "36.15MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.43,
+                    "memUsage": "36.41MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 69.55,
+                    "memUsage": "36.57MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.3,
+                    "memUsage": "36.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 77.88,
+                    "memUsage": "36.91MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 0,
+                    "memUsage": "36.14MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 69.1242857142857,
+                "maxCpuPercent": 86.3,
+                "lastMemUsage": "36.14MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 1,
+              "requestCount": 18218,
+              "throughputRps": 607.2615049438747,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.237,
+              "p95LatencyMs": 2.892,
+              "p99LatencyMs": 5.95749,
+              "meanLatencyMs": 1.5552920737731823,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 73.38,
+                    "memUsage": "37.04MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.27,
+                    "memUsage": "37.09MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.22,
+                    "memUsage": "36.95MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 71.48,
+                    "memUsage": "36.94MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 70.4,
+                    "memUsage": "36.68MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.18,
+                    "memUsage": "36.93MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 70.74,
+                    "memUsage": "36.49MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 84.17,
+                    "memUsage": "37.16MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.99,
+                    "memUsage": "36.97MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 64.67,
+                    "memUsage": "36.49MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 70.26,
+                    "memUsage": "36.58MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 71.17,
+                    "memUsage": "36.46MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.88,
+                    "memUsage": "36.7MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 12.39,
+                    "memUsage": "36.58MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 68.37142857142857,
+                "maxCpuPercent": 84.17,
+                "lastMemUsage": "36.58MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 1,
+              "requestCount": 21465,
+              "throughputRps": 715.3040305390999,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.143,
+              "p95LatencyMs": 2.006,
+              "p99LatencyMs": 4.102839999999997,
+              "meanLatencyMs": 1.3166004192872074,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 69.19,
+                    "memUsage": "36.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 69.13,
+                    "memUsage": "36.95MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.93,
+                    "memUsage": "36.53MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.11,
+                    "memUsage": "36.77MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 70.52,
+                    "memUsage": "37.15MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 71.06,
+                    "memUsage": "37.01MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.59,
+                    "memUsage": "36.55MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.05,
+                    "memUsage": "36.48MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 70.11,
+                    "memUsage": "36.22MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 71.92,
+                    "memUsage": "36.63MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.17,
+                    "memUsage": "36.35MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.3,
+                    "memUsage": "36.61MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.89,
+                    "memUsage": "36.54MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 32.92,
+                    "memUsage": "36.34MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 69.06357142857141,
+                "maxCpuPercent": 75.05,
+                "lastMemUsage": "36.34MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:32:53.781Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "static",
+              "DISABLED_RULES": "R1,R2,R3,R4,R5",
+              "EXPERIMENT_RUN_LABEL": "perf-gateway-bare",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "gateway-bare",
+            "concurrency": 1
+          }
+        },
+        {
+          "concurrency": 5,
+          "repeatCount": 3,
+          "throughputRpsMedian": 1157.89403868048,
+          "throughputRpsIqr": [
+            751.7679487637282,
+            1166.8243141003463
+          ],
+          "throughputRpsMean": 1025.4954338481848,
+          "throughputRpsStddev": 237.0970044575948,
+          "p50LatencyMsMedian": 3.188,
+          "p95LatencyMsMedian": 8.734,
+          "p95LatencyMsIqr": [
+            7.695799999999996,
+            14.582799999999986
+          ],
+          "p95LatencyMsMean": 10.337533333333328,
+          "p95LatencyMsStddev": 3.7129747660512438,
+          "meanCpuPercentMedian": 122.93076923076923,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 5,
+              "requestCount": 34741,
+              "throughputRps": 1157.89403868048,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 3.188,
+              "p95LatencyMs": 8.734,
+              "p99LatencyMs": 19.16319999999999,
+              "meanLatencyMs": 4.214422123715518,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 129.42,
+                    "memUsage": "40.33MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.01,
+                    "memUsage": "44.14MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.82,
+                    "memUsage": "44.12MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 127.09,
+                    "memUsage": "44.93MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.34,
+                    "memUsage": "46.68MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 135.57,
+                    "memUsage": "47.93MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 130.27,
+                    "memUsage": "50.19MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.87,
+                    "memUsage": "53.54MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.63,
+                    "memUsage": "55.11MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.95,
+                    "memUsage": "57.04MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.79,
+                    "memUsage": "58.26MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 127.98,
+                    "memUsage": "60.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.91,
+                    "memUsage": "62.29MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.57,
+                    "memUsage": "65.23MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 125.73,
+                "maxCpuPercent": 135.57,
+                "lastMemUsage": "65.23MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 5,
+              "requestCount": 22569,
+              "throughputRps": 751.7679487637282,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 3.555,
+              "p95LatencyMs": 14.582799999999986,
+              "p99LatencyMs": 43.78387999999998,
+              "meanLatencyMs": 6.53147002525584,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 125.81,
+                    "memUsage": "66.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 129.58,
+                    "memUsage": "68.88MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.18,
+                    "memUsage": "73.02MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.83,
+                    "memUsage": "72.61MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 140.87,
+                    "memUsage": "76.49MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 150.94,
+                    "memUsage": "77.46MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.97,
+                    "memUsage": "77.94MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 127.84,
+                    "memUsage": "76.05MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.58,
+                    "memUsage": "79.39MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.97,
+                    "memUsage": "80.04MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.69,
+                    "memUsage": "83.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.79,
+                    "memUsage": "80.39MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 47.62,
+                    "memUsage": "85.08MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 121.05153846153846,
+                "maxCpuPercent": 150.94,
+                "lastMemUsage": "85.08MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 5,
+              "requestCount": 35009,
+              "throughputRps": 1166.8243141003463,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 2.96,
+              "p95LatencyMs": 7.695799999999996,
+              "p99LatencyMs": 33.52631999999998,
+              "meanLatencyMs": 4.187854980147943,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 117.89,
+                    "memUsage": "82.47MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.11,
+                    "memUsage": "82.38MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.04,
+                    "memUsage": "85.12MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.14,
+                    "memUsage": "88.88MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.6,
+                    "memUsage": "89.57MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.23,
+                    "memUsage": "92.05MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.31,
+                    "memUsage": "95.24MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.29,
+                    "memUsage": "97.02MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.95,
+                    "memUsage": "99.92MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.19,
+                    "memUsage": "100.8MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.86,
+                    "memUsage": "105.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 131.35,
+                    "memUsage": "105.3MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.14,
+                    "memUsage": "104.9MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 122.93076923076923,
+                "maxCpuPercent": 131.35,
+                "lastMemUsage": "104.9MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:45:19.227Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "static",
+              "DISABLED_RULES": "R1,R2,R3,R4,R5",
+              "EXPERIMENT_RUN_LABEL": "perf-gateway-bare",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "gateway-bare",
+            "concurrency": 5
+          }
+        },
+        {
+          "concurrency": 10,
+          "repeatCount": 3,
+          "throughputRpsMedian": 1216.1768823602758,
+          "throughputRpsIqr": [
+            1077.6606285532991,
+            1230.0490620213682
+          ],
+          "throughputRpsMean": 1174.6288576449813,
+          "throughputRpsStddev": 84.26290661981751,
+          "p50LatencyMsMedian": 5.507,
+          "p95LatencyMsMedian": 17.968999999999983,
+          "p95LatencyMsIqr": [
+            14.867399999999993,
+            23.034099999999995
+          ],
+          "p95LatencyMsMean": 18.62349999999999,
+          "p95LatencyMsStddev": 4.122502263189193,
+          "meanCpuPercentMedian": 132.28,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 10,
+              "requestCount": 36917,
+              "throughputRps": 1230.0490620213682,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 5.507,
+              "p95LatencyMs": 17.968999999999983,
+              "p99LatencyMs": 43.41563999999999,
+              "meanLatencyMs": 8.033185740986571,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 138.09,
+                    "memUsage": "44.46MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 131.12,
+                    "memUsage": "47.72MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 134.41,
+                    "memUsage": "51.01MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 135.79,
+                    "memUsage": "53.98MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 134.26,
+                    "memUsage": "54.64MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 147.68,
+                    "memUsage": "59.73MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 129.25,
+                    "memUsage": "63.08MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 132.25,
+                    "memUsage": "66.19MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 130.07,
+                    "memUsage": "68.62MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 139.96,
+                    "memUsage": "71.54MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 114.95,
+                    "memUsage": "71.39MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 130,
+                    "memUsage": "74.65MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.81,
+                    "memUsage": "76.16MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 132.28,
+                "maxCpuPercent": 147.68,
+                "lastMemUsage": "76.16MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 10,
+              "requestCount": 32347,
+              "throughputRps": 1077.6606285532991,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 5.604,
+              "p95LatencyMs": 23.034099999999995,
+              "p99LatencyMs": 65.21417999999998,
+              "meanLatencyMs": 9.165357127399783,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 198.34,
+                    "memUsage": "76.23MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 142.69,
+                    "memUsage": "79.59MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 132.49,
+                    "memUsage": "79.09MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 127.36,
+                    "memUsage": "82.79MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 128.41,
+                    "memUsage": "85.08MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 131.92,
+                    "memUsage": "87.11MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 134.23,
+                    "memUsage": "92.94MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.79,
+                    "memUsage": "93.84MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 135.76,
+                    "memUsage": "92.53MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.99,
+                    "memUsage": "96.45MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 128.08,
+                    "memUsage": "101.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.43,
+                    "memUsage": "104MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 132.4,
+                    "memUsage": "105.7MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 89.36,
+                    "memUsage": "108.2MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 132.375,
+                "maxCpuPercent": 198.34,
+                "lastMemUsage": "108.2MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 10,
+              "requestCount": 36489,
+              "throughputRps": 1216.1768823602758,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 5.401,
+              "p95LatencyMs": 14.867399999999993,
+              "p99LatencyMs": 61.27991999999997,
+              "meanLatencyMs": 8.119321521554399,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 129.94,
+                    "memUsage": "106.5MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 129.07,
+                    "memUsage": "109.3MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 135.19,
+                    "memUsage": "110.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.44,
+                    "memUsage": "115.1MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 135.74,
+                    "memUsage": "117.9MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.82,
+                    "memUsage": "121.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.56,
+                    "memUsage": "122.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.88,
+                    "memUsage": "125.1MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.05,
+                    "memUsage": "127.6MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 139.52,
+                    "memUsage": "132.9MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.53,
+                    "memUsage": "136.5MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 129.66,
+                    "memUsage": "136.7MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.91,
+                    "memUsage": "139.3MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 128.87,
+                "maxCpuPercent": 139.52,
+                "lastMemUsage": "139.3MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:55:45.574Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "static",
+              "DISABLED_RULES": "R1,R2,R3,R4,R5",
+              "EXPERIMENT_RUN_LABEL": "perf-gateway-bare",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "gateway-bare",
+            "concurrency": 10
+          }
+        },
+        {
+          "concurrency": 25,
+          "repeatCount": 3,
+          "throughputRpsMedian": 256.9740703608842,
+          "throughputRpsIqr": [
+            100.72551192553635,
+            560.1006669110222
+          ],
+          "throughputRpsMean": 305.9334163991476,
+          "throughputRpsStddev": 233.56829071570397,
+          "p50LatencyMsMedian": 29.737499999999997,
+          "p95LatencyMsMedian": 322.05754999999925,
+          "p95LatencyMsIqr": [
+            120.79179999999995,
+            722.1116999999999
+          ],
+          "p95LatencyMsMean": 388.32034999999973,
+          "p95LatencyMsStddev": 306.0873642146675,
+          "meanCpuPercentMedian": 148.85999999999999,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 25,
+              "requestCount": 16965,
+              "throughputRps": 560.1006669110222,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 26.34,
+              "p95LatencyMs": 120.79179999999995,
+              "p99LatencyMs": 296.1232399999999,
+              "meanLatencyMs": 44.21536327733564,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 149.33,
+                    "memUsage": "34.96MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 155.62,
+                    "memUsage": "37.74MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 159.6,
+                    "memUsage": "42.19MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 133.79,
+                    "memUsage": "43.85MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 148.91,
+                    "memUsage": "45.5MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 133.09,
+                    "memUsage": "47.21MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 136.66,
+                    "memUsage": "49.04MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 140.34,
+                    "memUsage": "50.84MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 143.59,
+                    "memUsage": "52.19MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 151.9,
+                    "memUsage": "54.61MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 155.46,
+                    "memUsage": "55.34MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 178.03,
+                    "memUsage": "56.55MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 148.85999999999999,
+                "maxCpuPercent": 178.03,
+                "lastMemUsage": "56.55MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 25,
+              "requestCount": 7800,
+              "throughputRps": 256.9740703608842,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 29.737499999999997,
+              "p95LatencyMs": 322.05754999999925,
+              "p99LatencyMs": 1167.5084699999977,
+              "meanLatencyMs": 96.78695179487181,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 138.61,
+                    "memUsage": "54.83MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 133.69,
+                    "memUsage": "57.46MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 165.37,
+                    "memUsage": "58.84MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 153.29,
+                    "memUsage": "62.52MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 62.83,
+                    "memUsage": "62.02MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.16,
+                    "memUsage": "62.82MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 198,
+                    "memUsage": "62.98MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 109.96,
+                    "memUsage": "62.9MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 164.79,
+                    "memUsage": "63.49MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 133.1,
+                    "memUsage": "63.26MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 137.78,
+                "maxCpuPercent": 198,
+                "lastMemUsage": "63.26MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 25,
+              "requestCount": 3180,
+              "throughputRps": 100.72551192553635,
+              "errorCount": 25,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 89.376,
+              "p95LatencyMs": 722.1116999999999,
+              "p99LatencyMs": 4185.63265,
+              "meanLatencyMs": 245.14356981132073,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 189.86,
+                    "memUsage": "65.33MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 256.44,
+                    "memUsage": "64.88MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 140.19,
+                    "memUsage": "66.04MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 133.53,
+                    "memUsage": "62.49MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 143.02,
+                    "memUsage": "66.25MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 307,
+                    "memUsage": "63.09MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 111.67,
+                    "memUsage": "65.07MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 131.53,
+                    "memUsage": "63.39MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 162.63,
+                    "memUsage": "64.95MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 175.09666666666666,
+                "maxCpuPercent": 307,
+                "lastMemUsage": "64.95MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T21:05:08.833Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "static",
+              "DISABLED_RULES": "R1,R2,R3,R4,R5",
+              "EXPERIMENT_RUN_LABEL": "perf-gateway-bare",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "gateway-bare",
+            "concurrency": 25
+          }
+        }
+      ]
+    },
+    {
+      "id": "gateway-jwt",
+      "label": "gateway, only R2 enabled (adds real RS256 verification)",
+      "points": [
+        {
+          "concurrency": 1,
+          "repeatCount": 3,
+          "throughputRpsMedian": 537.2196163257966,
+          "throughputRpsIqr": [
+            520.4880461245407,
+            551.9780312743552
+          ],
+          "throughputRpsMean": 536.5618979082309,
+          "throughputRpsStddev": 15.755292327389185,
+          "p50LatencyMsMedian": 1.489,
+          "p95LatencyMsMedian": 2.983199999999999,
+          "p95LatencyMsIqr": [
+            2.6780499999999994,
+            3.1645999999999987
+          ],
+          "p95LatencyMsMean": 2.941949999999999,
+          "p95LatencyMsStddev": 0.24588391061637166,
+          "meanCpuPercentMedian": 71.3442857142857,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 1,
+              "requestCount": 16560,
+              "throughputRps": 551.9780312743552,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.489,
+              "p95LatencyMs": 2.6780499999999994,
+              "p99LatencyMs": 5.04205,
+              "meanLatencyMs": 1.7144664855072398,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 94.29,
+                    "memUsage": "39.46MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.47,
+                    "memUsage": "40.21MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 69.65,
+                    "memUsage": "40.54MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.92,
+                    "memUsage": "40.04MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.44,
+                    "memUsage": "40.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.7,
+                    "memUsage": "40.82MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.33,
+                    "memUsage": "40.49MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.29,
+                    "memUsage": "40.73MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 77.02,
+                    "memUsage": "40.73MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 71.85,
+                    "memUsage": "40.23MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 71.98,
+                    "memUsage": "40.25MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.55,
+                    "memUsage": "40.62MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.58,
+                    "memUsage": "40.8MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 24.75,
+                    "memUsage": "40.72MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 71.3442857142857,
+                "maxCpuPercent": 94.29,
+                "lastMemUsage": "40.72MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 1,
+              "requestCount": 16117,
+              "throughputRps": 537.2196163257966,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.461,
+              "p95LatencyMs": 2.983199999999999,
+              "p99LatencyMs": 6.093119999999997,
+              "meanLatencyMs": 1.773136812061812,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 71.88,
+                    "memUsage": "40.96MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.48,
+                    "memUsage": "40.78MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.42,
+                    "memUsage": "40.38MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.36,
+                    "memUsage": "40.58MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 80.72,
+                    "memUsage": "40.3MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 80.67,
+                    "memUsage": "41.22MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 76.27,
+                    "memUsage": "40.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.74,
+                    "memUsage": "40.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 76.81,
+                    "memUsage": "40.61MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 79.5,
+                    "memUsage": "40.8MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.88,
+                    "memUsage": "40.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.91,
+                    "memUsage": "40.57MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 82.32,
+                    "memUsage": "40.58MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.87,
+                    "memUsage": "41.12MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 76.0592857142857,
+                "maxCpuPercent": 82.32,
+                "lastMemUsage": "41.12MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 1,
+              "requestCount": 15615,
+              "throughputRps": 520.4880461245407,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.503,
+              "p95LatencyMs": 3.1645999999999987,
+              "p99LatencyMs": 6.274739999999999,
+              "meanLatencyMs": 1.8205601024655749,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 71.77,
+                    "memUsage": "41.1MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.66,
+                    "memUsage": "41.62MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.88,
+                    "memUsage": "41.28MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.2,
+                    "memUsage": "40.14MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 93.94,
+                    "memUsage": "40.91MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.75,
+                    "memUsage": "41.29MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 70.93,
+                    "memUsage": "40.64MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 77.32,
+                    "memUsage": "40.85MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.37,
+                    "memUsage": "40.74MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 71.26,
+                    "memUsage": "40.7MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 68.82,
+                    "memUsage": "41.19MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 77.46,
+                    "memUsage": "40.65MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 76.36,
+                    "memUsage": "40.59MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 0.07,
+                    "memUsage": "40.3MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 70.19928571428572,
+                "maxCpuPercent": 93.94,
+                "lastMemUsage": "40.3MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:38:16.606Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "static",
+              "DISABLED_RULES": "R1,R3,R4,R5",
+              "EXPERIMENT_RUN_LABEL": "perf-gateway-jwt",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "gateway-jwt",
+            "concurrency": 1
+          }
+        },
+        {
+          "concurrency": 5,
+          "repeatCount": 3,
+          "throughputRpsMedian": 926.613479052969,
+          "throughputRpsIqr": [
+            659.4851764105355,
+            1070.560541646775
+          ],
+          "throughputRpsMean": 885.5530657034265,
+          "throughputRpsStddev": 208.59100444255353,
+          "p50LatencyMsMedian": 4.148,
+          "p95LatencyMsMedian": 9.641199999999994,
+          "p95LatencyMsIqr": [
+            7.934,
+            16.75659999999999
+          ],
+          "p95LatencyMsMean": 11.443933333333328,
+          "p95LatencyMsStddev": 4.679418050712428,
+          "meanCpuPercentMedian": 115.03714285714285,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 5,
+              "requestCount": 32121,
+              "throughputRps": 1070.560541646775,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 3.921,
+              "p95LatencyMs": 7.934,
+              "p99LatencyMs": 16.171599999999998,
+              "meanLatencyMs": 4.582072880669945,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 118.05,
+                    "memUsage": "41.16MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.99,
+                    "memUsage": "41.41MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.31,
+                    "memUsage": "44.33MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.65,
+                    "memUsage": "46.82MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.29,
+                    "memUsage": "47.76MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.09,
+                    "memUsage": "49.42MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.94,
+                    "memUsage": "51.74MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.27,
+                    "memUsage": "53.73MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.69,
+                    "memUsage": "55.92MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.41,
+                    "memUsage": "57.56MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.96,
+                    "memUsage": "59.37MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.77,
+                    "memUsage": "62.91MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.79,
+                    "memUsage": "66.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 55.31,
+                    "memUsage": "65.58MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 115.03714285714285,
+                "maxCpuPercent": 123.09,
+                "lastMemUsage": "65.58MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 5,
+              "requestCount": 27800,
+              "throughputRps": 926.613479052969,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 4.148,
+              "p95LatencyMs": 9.641199999999994,
+              "p99LatencyMs": 26.969569999999962,
+              "meanLatencyMs": 5.299328705035995,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 122.33,
+                    "memUsage": "59.78MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 115.76,
+                    "memUsage": "62.33MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.31,
+                    "memUsage": "66.14MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.3,
+                    "memUsage": "65.39MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 114.35,
+                    "memUsage": "67.41MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 115.56,
+                    "memUsage": "69.84MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.06,
+                    "memUsage": "70.24MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.96,
+                    "memUsage": "73.97MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.04,
+                    "memUsage": "73.58MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.95,
+                    "memUsage": "76.11MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 115.52,
+                    "memUsage": "79.33MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.7,
+                    "memUsage": "78.99MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.28,
+                    "memUsage": "80.7MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 57.74,
+                    "memUsage": "82.21MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 113.99,
+                "maxCpuPercent": 123.04,
+                "lastMemUsage": "82.21MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 5,
+              "requestCount": 19793,
+              "throughputRps": 659.4851764105355,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 4.53,
+              "p95LatencyMs": 16.75659999999999,
+              "p99LatencyMs": 57.69255999999998,
+              "meanLatencyMs": 7.458371393927128,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 114.26,
+                    "memUsage": "79.52MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 114.37,
+                    "memUsage": "82.26MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 112.36,
+                    "memUsage": "83.76MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.86,
+                    "memUsage": "84.45MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 112.19,
+                    "memUsage": "85.92MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.04,
+                    "memUsage": "89.19MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 113.85,
+                    "memUsage": "90.68MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 112.24,
+                    "memUsage": "90.24MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.18,
+                    "memUsage": "91.88MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.22,
+                    "memUsage": "91.85MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.01,
+                    "memUsage": "93.84MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 127.55,
+                    "memUsage": "95.96MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.51,
+                    "memUsage": "95.93MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 117.81846153846153,
+                "maxCpuPercent": 127.55,
+                "lastMemUsage": "95.93MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:47:04.448Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "static",
+              "DISABLED_RULES": "R1,R3,R4,R5",
+              "EXPERIMENT_RUN_LABEL": "perf-gateway-jwt",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "gateway-jwt",
+            "concurrency": 5
+          }
+        },
+        {
+          "concurrency": 10,
+          "repeatCount": 3,
+          "throughputRpsMedian": 1095.64038178226,
+          "throughputRpsIqr": [
+            1027.2912292473989,
+            1113.2172097341615
+          ],
+          "throughputRpsMean": 1078.7162735879401,
+          "throughputRpsStddev": 45.39424643369095,
+          "p50LatencyMsMedian": 7.479,
+          "p95LatencyMsMedian": 16.019,
+          "p95LatencyMsIqr": [
+            15.531849999999995,
+            17.04119999999999
+          ],
+          "p95LatencyMsMean": 16.197349999999993,
+          "p95LatencyMsStddev": 0.770318698656598,
+          "meanCpuPercentMedian": 119.395,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 10,
+              "requestCount": 32917,
+              "throughputRps": 1095.64038178226,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 7.524,
+              "p95LatencyMs": 17.04119999999999,
+              "p99LatencyMs": 28.696679999999997,
+              "meanLatencyMs": 9.01184002187319,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 127.57,
+                    "memUsage": "41.82MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.82,
+                    "memUsage": "44.33MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.18,
+                    "memUsage": "47.13MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.85,
+                    "memUsage": "49.95MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.46,
+                    "memUsage": "53.62MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.27,
+                    "memUsage": "55.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.11,
+                    "memUsage": "56.88MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.72,
+                    "memUsage": "58.45MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.78,
+                    "memUsage": "61.92MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 133.7,
+                    "memUsage": "65.21MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 139.45,
+                    "memUsage": "66.73MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 132.44,
+                    "memUsage": "67.23MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.28,
+                    "memUsage": "69.8MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 45.15,
+                    "memUsage": "71.8MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 121.27000000000001,
+                "maxCpuPercent": 139.45,
+                "lastMemUsage": "71.8MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 10,
+              "requestCount": 33402,
+              "throughputRps": 1113.2172097341615,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 7.286,
+              "p95LatencyMs": 15.531849999999995,
+              "p99LatencyMs": 40.686169999999976,
+              "meanLatencyMs": 8.872487395964336,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 123.47,
+                    "memUsage": "68.76MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126,
+                    "memUsage": "71.3MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.95,
+                    "memUsage": "76.04MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.69,
+                    "memUsage": "79.89MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.91,
+                    "memUsage": "81.09MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 129.31,
+                    "memUsage": "84.41MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.1,
+                    "memUsage": "82.89MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.14,
+                    "memUsage": "88.74MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.04,
+                    "memUsage": "92.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.28,
+                    "memUsage": "93.34MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.66,
+                    "memUsage": "95.36MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.57,
+                    "memUsage": "98.7MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.22,
+                    "memUsage": "101.5MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 50.5,
+                    "memUsage": "103.9MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 118.55999999999999,
+                "maxCpuPercent": 129.31,
+                "lastMemUsage": "103.9MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 10,
+              "requestCount": 30821,
+              "throughputRps": 1027.2912292473989,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 7.479,
+              "p95LatencyMs": 16.019,
+              "p99LatencyMs": 60.532599999999995,
+              "meanLatencyMs": 9.631087732390274,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 118.51,
+                    "memUsage": "98.25MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.38,
+                    "memUsage": "100.8MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.81,
+                    "memUsage": "104.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.02,
+                    "memUsage": "109.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 129.42,
+                    "memUsage": "110.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.49,
+                    "memUsage": "112.7MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 127.44,
+                    "memUsage": "116.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.77,
+                    "memUsage": "120.3MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.96,
+                    "memUsage": "119.3MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.16,
+                    "memUsage": "121.7MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 128.79,
+                    "memUsage": "124.6MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.45,
+                    "memUsage": "127.1MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.09,
+                    "memUsage": "128.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.24,
+                    "memUsage": "128.7MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 119.395,
+                "maxCpuPercent": 129.42,
+                "lastMemUsage": "128.7MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:57:31.095Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "static",
+              "DISABLED_RULES": "R1,R3,R4,R5",
+              "EXPERIMENT_RUN_LABEL": "perf-gateway-jwt",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "gateway-jwt",
+            "concurrency": 10
+          }
+        },
+        {
+          "concurrency": 25,
+          "repeatCount": 3,
+          "throughputRpsMedian": 1101.436980426055,
+          "throughputRpsIqr": [
+            960.1558776304682,
+            1116.7026399772749
+          ],
+          "throughputRpsMean": 1059.4318326779328,
+          "throughputRpsStddev": 86.31365203907825,
+          "p50LatencyMsMedian": 17.433,
+          "p95LatencyMsMedian": 53.392599999999995,
+          "p95LatencyMsIqr": [
+            53.18549999999999,
+            58.60559999999975
+          ],
+          "p95LatencyMsMean": 55.06123333333324,
+          "p95LatencyMsStddev": 3.071257707085562,
+          "meanCpuPercentMedian": 124.34846153846154,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 25,
+              "requestCount": 28847,
+              "throughputRps": 960.1558776304682,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 19.064,
+              "p95LatencyMs": 53.392599999999995,
+              "p99LatencyMs": 131.22375999999997,
+              "meanLatencyMs": 25.896967483620475,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 122.52,
+                    "memUsage": "54.5MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 133.22,
+                    "memUsage": "55.9MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 128.68,
+                    "memUsage": "58.37MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.05,
+                    "memUsage": "61.94MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 133.8,
+                    "memUsage": "63.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.97,
+                    "memUsage": "67.95MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 133.33,
+                    "memUsage": "69.27MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.68,
+                    "memUsage": "71.45MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 134.05,
+                    "memUsage": "75.67MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 135.17,
+                    "memUsage": "77.78MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 132.43,
+                    "memUsage": "79.16MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 130.25,
+                    "memUsage": "81.27MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.29,
+                    "memUsage": "85.13MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 129.41846153846154,
+                "maxCpuPercent": 135.17,
+                "lastMemUsage": "85.13MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 25,
+              "requestCount": 33071,
+              "throughputRps": 1101.436980426055,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 17.433,
+              "p95LatencyMs": 53.18549999999999,
+              "p99LatencyMs": 110.25729999999989,
+              "meanLatencyMs": 22.571378881799795,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 122.89,
+                    "memUsage": "86.05MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.1,
+                    "memUsage": "88.93MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.71,
+                    "memUsage": "89.76MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.09,
+                    "memUsage": "94.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.08,
+                    "memUsage": "97.72MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.34,
+                    "memUsage": "99.75MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.18,
+                    "memUsage": "103MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.8,
+                    "memUsage": "106.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.5,
+                    "memUsage": "108.7MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.12,
+                    "memUsage": "112.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.96,
+                    "memUsage": "114.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 130.08,
+                    "memUsage": "116.9MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 128.2,
+                    "memUsage": "122.8MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 124.00384615384615,
+                "maxCpuPercent": 130.08,
+                "lastMemUsage": "122.8MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 25,
+              "requestCount": 33513,
+              "throughputRps": 1116.7026399772749,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 17.008,
+              "p95LatencyMs": 58.60559999999975,
+              "p99LatencyMs": 122.05951999999996,
+              "meanLatencyMs": 22.266225255870776,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 118.48,
+                    "memUsage": "123.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.78,
+                    "memUsage": "124.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 134.63,
+                    "memUsage": "128.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.96,
+                    "memUsage": "131.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.35,
+                    "memUsage": "133.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.87,
+                    "memUsage": "136.5MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.13,
+                    "memUsage": "140.1MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.21,
+                    "memUsage": "142.1MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 127.29,
+                    "memUsage": "143.9MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.66,
+                    "memUsage": "146.8MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.8,
+                    "memUsage": "150.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.86,
+                    "memUsage": "154MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.51,
+                    "memUsage": "157.4MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 124.34846153846154,
+                "maxCpuPercent": 134.63,
+                "lastMemUsage": "157.4MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T21:00:53.037Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "static",
+              "DISABLED_RULES": "R1,R3,R4,R5",
+              "EXPERIMENT_RUN_LABEL": "perf-gateway-jwt",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "gateway-jwt",
+            "concurrency": 25
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "label": "static mode, all rules enabled (adds static rule evaluation)",
+      "points": [
+        {
+          "concurrency": 1,
+          "repeatCount": 3,
+          "throughputRpsMedian": 293.8168795880764,
+          "throughputRpsIqr": [
+            172.24293733133365,
+            469.51564824391613
+          ],
+          "throughputRpsMean": 311.8584883877754,
+          "throughputRpsStddev": 149.45531405537238,
+          "p50LatencyMsMedian": 1.917,
+          "p95LatencyMsMedian": 6.468399999999993,
+          "p95LatencyMsIqr": [
+            3.137749999999999,
+            14.403199999999975
+          ],
+          "p95LatencyMsMean": 8.003116666666656,
+          "p95LatencyMsStddev": 5.787409382515911,
+          "meanCpuPercentMedian": 78.44153846153846,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 1,
+              "requestCount": 14086,
+              "throughputRps": 469.51564824391613,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.792,
+              "p95LatencyMs": 3.137749999999999,
+              "p99LatencyMs": 5.691,
+              "meanLatencyMs": 2.0480178901036528,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 79.9,
+                    "memUsage": "35.47MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 81.91,
+                    "memUsage": "35.75MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.46,
+                    "memUsage": "36.54MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 76.35,
+                    "memUsage": "36.16MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 78.87,
+                    "memUsage": "36.51MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 80.3,
+                    "memUsage": "37.12MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.81,
+                    "memUsage": "36.59MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.74,
+                    "memUsage": "36.52MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 80.51,
+                    "memUsage": "36.54MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.17,
+                    "memUsage": "36.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.98,
+                    "memUsage": "36.76MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 83.28,
+                    "memUsage": "37.25MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 79.54,
+                    "memUsage": "36.91MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 18.69,
+                    "memUsage": "37MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 73.89357142857143,
+                "maxCpuPercent": 83.28,
+                "lastMemUsage": "37MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 1,
+              "requestCount": 8815,
+              "throughputRps": 293.8168795880764,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.917,
+              "p95LatencyMs": 6.468399999999993,
+              "p99LatencyMs": 15.527699999999989,
+              "meanLatencyMs": 3.287710720363012,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 75.2,
+                    "memUsage": "37.07MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 70.95,
+                    "memUsage": "36.78MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.09,
+                    "memUsage": "37.27MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 77.01,
+                    "memUsage": "37.25MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 79.98,
+                    "memUsage": "36.85MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.05,
+                    "memUsage": "36.45MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.13,
+                    "memUsage": "36.96MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 71.52,
+                    "memUsage": "36.79MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 173.5,
+                    "memUsage": "36.71MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 113.17,
+                    "memUsage": "36.71MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 63.44,
+                    "memUsage": "36.78MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 70.62,
+                    "memUsage": "37.16MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 3.08,
+                    "memUsage": "36.46MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 78.44153846153846,
+                "maxCpuPercent": 173.5,
+                "lastMemUsage": "36.46MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 1,
+              "requestCount": 5168,
+              "throughputRps": 172.24293733133365,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 3.1615,
+              "p95LatencyMs": 14.403199999999975,
+              "p99LatencyMs": 42.367409999999985,
+              "meanLatencyMs": 5.601951238390092,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 50.46,
+                    "memUsage": "36.59MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 83.66,
+                    "memUsage": "36.9MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 69.41,
+                    "memUsage": "36.71MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 66.66,
+                    "memUsage": "36.71MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 93.85,
+                    "memUsage": "36.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 94.24,
+                    "memUsage": "37.16MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 98.2,
+                    "memUsage": "37.04MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 108.55,
+                    "memUsage": "37.54MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 76.58,
+                    "memUsage": "37.3MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 79.69,
+                    "memUsage": "36.74MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.77,
+                    "memUsage": "37.05MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 76.37,
+                    "memUsage": "37.07MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 81.11999999999999,
+                "maxCpuPercent": 108.55,
+                "lastMemUsage": "37.07MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:40:04.220Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "static",
+              "DISABLED_RULES": "",
+              "EXPERIMENT_RUN_LABEL": "perf-B",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "B",
+            "concurrency": 1
+          }
+        },
+        {
+          "concurrency": 5,
+          "repeatCount": 3,
+          "throughputRpsMedian": 796.8421480301937,
+          "throughputRpsIqr": [
+            768.7333857796921,
+            862.0524453564365
+          ],
+          "throughputRpsMean": 809.209326388774,
+          "throughputRpsStddev": 47.87297823915592,
+          "p50LatencyMsMedian": 5.005,
+          "p95LatencyMsMedian": 11.15084999999999,
+          "p95LatencyMsIqr": [
+            9.155,
+            11.783549999999993
+          ],
+          "p95LatencyMsMean": 10.69646666666666,
+          "p95LatencyMsStddev": 1.3719208927023896,
+          "meanCpuPercentMedian": 108.59230769230771,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 5,
+              "requestCount": 23068,
+              "throughputRps": 768.7333857796921,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 5.103,
+              "p95LatencyMs": 11.783549999999993,
+              "p99LatencyMs": 22.321259999999995,
+              "meanLatencyMs": 6.370109198890217,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 111.15,
+                    "memUsage": "38.5MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 102.19,
+                    "memUsage": "39.65MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 109.56,
+                    "memUsage": "40.51MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 110.18,
+                    "memUsage": "41.34MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 107.42,
+                    "memUsage": "42.08MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 105.69,
+                    "memUsage": "42.81MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 105.52,
+                    "memUsage": "43.35MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 106.61,
+                    "memUsage": "44.07MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 103.82,
+                    "memUsage": "45.12MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 106.28,
+                    "memUsage": "45.27MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 104.18,
+                    "memUsage": "46.92MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 107.2,
+                    "memUsage": "48.01MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 131.9,
+                    "memUsage": "47.93MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 108.59230769230771,
+                "maxCpuPercent": 131.9,
+                "lastMemUsage": "47.93MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 5,
+              "requestCount": 23908,
+              "throughputRps": 796.8421480301937,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 5.005,
+              "p95LatencyMs": 11.15084999999999,
+              "p99LatencyMs": 23.420389999999994,
+              "meanLatencyMs": 6.159200309519826,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 108.15,
+                    "memUsage": "48.19MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 109.41,
+                    "memUsage": "49.74MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 110.37,
+                    "memUsage": "49.96MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 106.69,
+                    "memUsage": "50.51MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 109.17,
+                    "memUsage": "51.89MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 129.7,
+                    "memUsage": "52.64MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 103.63,
+                    "memUsage": "53.3MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 113.43,
+                    "memUsage": "54.25MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 111.84,
+                    "memUsage": "54.99MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 106.51,
+                    "memUsage": "55.98MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 110.24,
+                    "memUsage": "57.36MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 108.86,
+                    "memUsage": "58.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 112.24,
+                    "memUsage": "59.45MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 110.78769230769231,
+                "maxCpuPercent": 129.7,
+                "lastMemUsage": "59.45MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 5,
+              "requestCount": 25866,
+              "throughputRps": 862.0524453564365,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 4.694,
+              "p95LatencyMs": 9.155,
+              "p99LatencyMs": 24.54304999999998,
+              "meanLatencyMs": 5.700805188278025,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 102.22,
+                    "memUsage": "60.27MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 113.63,
+                    "memUsage": "61.81MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 111.7,
+                    "memUsage": "62.85MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.85,
+                    "memUsage": "63.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 108.21,
+                    "memUsage": "65.37MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 112.36,
+                    "memUsage": "66.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 112.82,
+                    "memUsage": "67.63MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 106.52,
+                    "memUsage": "68.29MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 109.47,
+                    "memUsage": "69.54MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 99.37,
+                    "memUsage": "70.93MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 105.61,
+                    "memUsage": "72.31MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 106.8,
+                    "memUsage": "73.45MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 111.62,
+                    "memUsage": "74.6MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.03,
+                    "memUsage": "75.14MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 106.58642857142856,
+                "maxCpuPercent": 119.85,
+                "lastMemUsage": "75.14MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:41:46.446Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "static",
+              "DISABLED_RULES": "",
+              "EXPERIMENT_RUN_LABEL": "perf-B",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "B",
+            "concurrency": 5
+          }
+        },
+        {
+          "concurrency": 10,
+          "repeatCount": 3,
+          "throughputRpsMedian": 672.5803500027326,
+          "throughputRpsIqr": [
+            633.1712254994903,
+            835.9858547007123
+          ],
+          "throughputRpsMean": 713.9124767343118,
+          "throughputRpsStddev": 107.53930434786982,
+          "p50LatencyMsMedian": 9.851,
+          "p95LatencyMsMedian": 30.495099999999987,
+          "p95LatencyMsIqr": [
+            23.97044999999999,
+            41.67769999999999
+          ],
+          "p95LatencyMsMean": 32.047749999999986,
+          "p95LatencyMsStddev": 8.955150314623422,
+          "meanCpuPercentMedian": 121.31692307692308,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 10,
+              "requestCount": 20207,
+              "throughputRps": 672.5803500027326,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 11.272,
+              "p95LatencyMs": 30.495099999999987,
+              "p99LatencyMs": 60.80947999999998,
+              "meanLatencyMs": 14.726247983372154,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 129.46,
+                    "memUsage": "38.38MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.51,
+                    "memUsage": "42.19MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.69,
+                    "memUsage": "43.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.34,
+                    "memUsage": "44.24MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 127.54,
+                    "memUsage": "45.79MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.98,
+                    "memUsage": "46.94MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.46,
+                    "memUsage": "48.57MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.67,
+                    "memUsage": "48.71MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 146.67,
+                    "memUsage": "51.71MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.73,
+                    "memUsage": "51.26MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.85,
+                    "memUsage": "50.97MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.69,
+                    "memUsage": "52.51MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 56.58,
+                    "memUsage": "54.88MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 119.08999999999999,
+                "maxCpuPercent": 146.67,
+                "lastMemUsage": "54.88MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 10,
+              "requestCount": 25082,
+              "throughputRps": 835.9858547007123,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 9.232,
+              "p95LatencyMs": 23.97044999999999,
+              "p99LatencyMs": 51.03160999999999,
+              "meanLatencyMs": 11.833247348696414,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 119.06,
+                    "memUsage": "52.97MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.39,
+                    "memUsage": "53.5MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.01,
+                    "memUsage": "55.03MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.1,
+                    "memUsage": "55.95MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.07,
+                    "memUsage": "58.5MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.16,
+                    "memUsage": "59.48MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.18,
+                    "memUsage": "60.07MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.01,
+                    "memUsage": "61.85MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.28,
+                    "memUsage": "64.94MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.84,
+                    "memUsage": "67.58MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.76,
+                    "memUsage": "68.45MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 130.53,
+                    "memUsage": "69.71MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 127.83,
+                    "memUsage": "71.5MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 121.93999999999997,
+                "maxCpuPercent": 130.53,
+                "lastMemUsage": "71.5MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 10,
+              "requestCount": 18995,
+              "throughputRps": 633.1712254994903,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 9.851,
+              "p95LatencyMs": 41.67769999999999,
+              "p99LatencyMs": 116.35589999999995,
+              "meanLatencyMs": 15.664669860489466,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 111.32,
+                    "memUsage": "71.32MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.73,
+                    "memUsage": "72.96MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 143.09,
+                    "memUsage": "74.21MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.06,
+                    "memUsage": "76.35MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 127.16,
+                    "memUsage": "77.72MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 114.97,
+                    "memUsage": "77.47MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 112.61,
+                    "memUsage": "79.47MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.29,
+                    "memUsage": "79.93MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.86,
+                    "memUsage": "81.41MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.44,
+                    "memUsage": "82.01MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.54,
+                    "memUsage": "83MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 112.63,
+                    "memUsage": "85.31MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.42,
+                    "memUsage": "88.62MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 121.31692307692308,
+                "maxCpuPercent": 143.09,
+                "lastMemUsage": "88.62MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:53:59.496Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "static",
+              "DISABLED_RULES": "",
+              "EXPERIMENT_RUN_LABEL": "perf-B",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "B",
+            "concurrency": 10
+          }
+        },
+        {
+          "concurrency": 25,
+          "repeatCount": 3,
+          "throughputRpsMedian": 202.03925818586046,
+          "throughputRpsIqr": [
+            154.78756405034204,
+            454.24394794904237
+          ],
+          "throughputRpsMean": 270.3569233950816,
+          "throughputRpsStddev": 160.99381664881068,
+          "p50LatencyMsMedian": 43.794,
+          "p95LatencyMsMedian": 169.0292499999999,
+          "p95LatencyMsIqr": [
+            138.74534999999995,
+            402.46089999999975
+          ],
+          "p95LatencyMsMean": 236.7451666666665,
+          "p95LatencyMsStddev": 144.31062627352085,
+          "meanCpuPercentMedian": 151.95727272727274,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 25,
+              "requestCount": 9390,
+              "throughputRps": 202.03925818586046,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 43.794,
+              "p95LatencyMs": 169.0292499999999,
+              "p99LatencyMs": 325.3637,
+              "meanLatencyMs": 106.52578945686884,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 145.71,
+                    "memUsage": "38.68MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 144.67,
+                    "memUsage": "40.3MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 137.74,
+                    "memUsage": "42.5MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 143.02,
+                    "memUsage": "42.65MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.8,
+                    "memUsage": "46.84MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 133.69,
+                    "memUsage": "47.48MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 156.32,
+                    "memUsage": "47.77MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 139.97,
+                    "memUsage": "50.76MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 218.05,
+                    "memUsage": "51.78MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 212.86,
+                    "memUsage": "51.71MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 154.983,
+                "maxCpuPercent": 218.05,
+                "lastMemUsage": "51.71MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 25,
+              "requestCount": 4652,
+              "throughputRps": 154.78756405034204,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 50.166,
+              "p95LatencyMs": 402.46089999999975,
+              "p99LatencyMs": 4875.042249999981,
+              "meanLatencyMs": 159.5959789337922,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 120.37,
+                    "memUsage": "51.51MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.2,
+                    "memUsage": "51.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 213.03,
+                    "memUsage": "51.03MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 162.95,
+                    "memUsage": "51.8MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.71,
+                    "memUsage": "52.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 79.81,
+                    "memUsage": "51.58MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 246.71,
+                    "memUsage": "52.38MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 235.87,
+                    "memUsage": "51.99MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.94,
+                    "memUsage": "51.77MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 136.15,
+                    "memUsage": "51.7MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 106.79,
+                    "memUsage": "54.45MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 151.95727272727274,
+                "maxCpuPercent": 246.71,
+                "lastMemUsage": "54.45MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 25,
+              "requestCount": 13664,
+              "throughputRps": 454.24394794904237,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 37.5745,
+              "p95LatencyMs": 138.74534999999995,
+              "p99LatencyMs": 271.96723999999966,
+              "meanLatencyMs": 54.72270469847746,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 149.96,
+                    "memUsage": "55.39MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 140.82,
+                    "memUsage": "54.14MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 132.1,
+                    "memUsage": "55.51MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 159.35,
+                    "memUsage": "55.95MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 139.58,
+                    "memUsage": "56.48MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 142.83,
+                    "memUsage": "58.02MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 142.54,
+                    "memUsage": "60.98MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.02,
+                    "memUsage": "61.75MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 177.27,
+                    "memUsage": "63.08MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 135.62,
+                    "memUsage": "63.93MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 131.66,
+                    "memUsage": "65.43MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.44,
+                    "memUsage": "64.96MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 141.18250000000003,
+                "maxCpuPercent": 177.27,
+                "lastMemUsage": "64.96MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T21:07:13.130Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "static",
+              "DISABLED_RULES": "",
+              "EXPERIMENT_RUN_LABEL": "perf-B",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "B",
+            "concurrency": 25
+          }
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "label": "adaptive mode, all rules enabled (adds scoring/tier-engine)",
+      "points": [
+        {
+          "concurrency": 1,
+          "repeatCount": 3,
+          "throughputRpsMedian": 400.1419512321456,
+          "throughputRpsIqr": [
+            393.3805801120285,
+            416.68680491784426
+          ],
+          "throughputRpsMean": 403.4031120873394,
+          "throughputRpsStddev": 11.990471478110946,
+          "p50LatencyMsMedian": 1.953,
+          "p95LatencyMsMedian": 3.9737999999999998,
+          "p95LatencyMsIqr": [
+            3.792,
+            4.223449999999994
+          ],
+          "p95LatencyMsMean": 3.996416666666665,
+          "p95LatencyMsStddev": 0.2166123515253276,
+          "meanCpuPercentMedian": 73.23,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 1,
+              "requestCount": 11802,
+              "throughputRps": 393.3805801120285,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.994,
+              "p95LatencyMs": 4.223449999999994,
+              "p99LatencyMs": 8.593979999999998,
+              "meanLatencyMs": 2.4318890018640773,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 96.02,
+                    "memUsage": "36.86MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 76.25,
+                    "memUsage": "38.23MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 78.07,
+                    "memUsage": "38.41MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 82.4,
+                    "memUsage": "38.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.61,
+                    "memUsage": "38.27MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 79.95,
+                    "memUsage": "38.56MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.1,
+                    "memUsage": "38.91MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 76.86,
+                    "memUsage": "38.57MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.76,
+                    "memUsage": "39MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 71.35,
+                    "memUsage": "38.77MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.09,
+                    "memUsage": "38.7MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 78.63,
+                    "memUsage": "39.03MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.99,
+                    "memUsage": "38.63MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 14.14,
+                    "memUsage": "38.83MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 73.23,
+                "maxCpuPercent": 96.02,
+                "lastMemUsage": "38.83MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 1,
+              "requestCount": 12501,
+              "throughputRps": 416.68680491784426,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.931,
+              "p95LatencyMs": 3.792,
+              "p99LatencyMs": 7.022,
+              "meanLatencyMs": 2.2963311735061143,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 71.22,
+                    "memUsage": "38.73MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 85.29,
+                    "memUsage": "38.73MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 77.38,
+                    "memUsage": "39.04MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.66,
+                    "memUsage": "38.55MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 76.43,
+                    "memUsage": "39.17MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 77.8,
+                    "memUsage": "38.8MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.76,
+                    "memUsage": "38.91MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 73.34,
+                    "memUsage": "39.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 78.26,
+                    "memUsage": "39.62MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.79,
+                    "memUsage": "39.74MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 68.44,
+                    "memUsage": "38.8MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 71.68,
+                    "memUsage": "39.62MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.02,
+                    "memUsage": "39.14MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 0,
+                    "memUsage": "38.88MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 69.86214285714286,
+                "maxCpuPercent": 85.29,
+                "lastMemUsage": "38.88MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 1,
+              "requestCount": 12005,
+              "throughputRps": 400.1419512321456,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 1.953,
+              "p95LatencyMs": 3.9737999999999998,
+              "p99LatencyMs": 8.32852,
+              "meanLatencyMs": 2.395575510204078,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 74.7,
+                    "memUsage": "39.29MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 77.5,
+                    "memUsage": "39.21MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 70.18,
+                    "memUsage": "39.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 72.96,
+                    "memUsage": "39.12MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.28,
+                    "memUsage": "39MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.75,
+                    "memUsage": "39.48MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 76.18,
+                    "memUsage": "39.17MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 81.43,
+                    "memUsage": "39.17MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74,
+                    "memUsage": "39.46MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 75.02,
+                    "memUsage": "39.34MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 71.86,
+                    "memUsage": "39.14MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 77.28,
+                    "memUsage": "39.34MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 74.7,
+                    "memUsage": "39.52MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 79.19,
+                    "memUsage": "39.5MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 75.35928571428572,
+                "maxCpuPercent": 81.43,
+                "lastMemUsage": "39.5MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:36:28.120Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "adaptive",
+              "DISABLED_RULES": "",
+              "EXPERIMENT_RUN_LABEL": "perf-C",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "C",
+            "concurrency": 1
+          }
+        },
+        {
+          "concurrency": 5,
+          "repeatCount": 3,
+          "throughputRpsMedian": 724.6289622074049,
+          "throughputRpsIqr": [
+            703.2474308877353,
+            818.5505143486806
+          ],
+          "throughputRpsMean": 748.8089691479403,
+          "throughputRpsStddev": 61.336814521408634,
+          "p50LatencyMsMedian": 5.074,
+          "p95LatencyMsMedian": 12.268,
+          "p95LatencyMsIqr": [
+            10.84544999999999,
+            13.41
+          ],
+          "p95LatencyMsMean": 12.174483333333333,
+          "p95LatencyMsStddev": 1.2848300279933318,
+          "meanCpuPercentMedian": 112.55499999999999,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 5,
+              "requestCount": 21121,
+              "throughputRps": 703.2474308877353,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 5.074,
+              "p95LatencyMs": 12.268,
+              "p99LatencyMs": 31.425799999999956,
+              "meanLatencyMs": 7.002712182188377,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 113.44,
+                    "memUsage": "36.93MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 113.68,
+                    "memUsage": "38.88MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 112.64,
+                    "memUsage": "40.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.69,
+                    "memUsage": "43.48MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 110.26,
+                    "memUsage": "43.75MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 110.45,
+                    "memUsage": "43.94MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 114.84,
+                    "memUsage": "44.57MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 114.6,
+                    "memUsage": "45.39MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 115.33,
+                    "memUsage": "47.95MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 112.73,
+                    "memUsage": "48.02MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 143.75,
+                    "memUsage": "47.77MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 127.88,
+                    "memUsage": "48.96MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.8,
+                    "memUsage": "49.71MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 46.68,
+                    "memUsage": "49.44MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 112.55499999999999,
+                "maxCpuPercent": 143.75,
+                "lastMemUsage": "49.44MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 5,
+              "requestCount": 24560,
+              "throughputRps": 818.5505143486806,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 5.011,
+              "p95LatencyMs": 10.84544999999999,
+              "p99LatencyMs": 19.618329999999997,
+              "meanLatencyMs": 6.012716164495138,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 117.78,
+                    "memUsage": "45.81MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 112.61,
+                    "memUsage": "46.83MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 112.86,
+                    "memUsage": "48.28MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.5,
+                    "memUsage": "49.91MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 115.78,
+                    "memUsage": "50.92MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.18,
+                    "memUsage": "50.99MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 114.74,
+                    "memUsage": "51.74MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.03,
+                    "memUsage": "53.13MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 113.96,
+                    "memUsage": "53.73MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.27,
+                    "memUsage": "53.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 114.06,
+                    "memUsage": "54.96MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 115.55,
+                    "memUsage": "56.22MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 115.25,
+                    "memUsage": "57.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 62.14,
+                    "memUsage": "58.14MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 111.83642857142857,
+                "maxCpuPercent": 120.18,
+                "lastMemUsage": "58.14MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 5,
+              "requestCount": 21741,
+              "throughputRps": 724.6289622074049,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 5.313,
+              "p95LatencyMs": 13.41,
+              "p99LatencyMs": 29.543399999999963,
+              "meanLatencyMs": 6.798724115726061,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 115.31,
+                    "memUsage": "54.82MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.15,
+                    "memUsage": "55.91MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.43,
+                    "memUsage": "56.78MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 114.64,
+                    "memUsage": "58.98MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.8,
+                    "memUsage": "57.06MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 114.92,
+                    "memUsage": "59.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 109.13,
+                    "memUsage": "60.35MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 114.58,
+                    "memUsage": "60.84MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 115.03,
+                    "memUsage": "62.56MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 110.8,
+                    "memUsage": "63.22MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 151.97,
+                    "memUsage": "65.13MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 115.32,
+                    "memUsage": "64.93MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 113.82,
+                    "memUsage": "65.97MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 64.31,
+                    "memUsage": "66.45MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 114.2292857142857,
+                "maxCpuPercent": 151.97,
+                "lastMemUsage": "66.45MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:43:31.503Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "adaptive",
+              "DISABLED_RULES": "",
+              "EXPERIMENT_RUN_LABEL": "perf-C",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "C",
+            "concurrency": 5
+          }
+        },
+        {
+          "concurrency": 10,
+          "repeatCount": 3,
+          "throughputRpsMedian": 939.122855653371,
+          "throughputRpsIqr": [
+            644.97550092542,
+            1002.3393249528905
+          ],
+          "throughputRpsMean": 862.1458938438938,
+          "throughputRpsStddev": 190.71265078108348,
+          "p50LatencyMsMedian": 8.6005,
+          "p95LatencyMsMedian": 21.75519999999999,
+          "p95LatencyMsIqr": [
+            18.131749999999993,
+            31.331699999999955
+          ],
+          "p95LatencyMsMean": 23.73954999999998,
+          "p95LatencyMsStddev": 6.820036927502645,
+          "meanCpuPercentMedian": 120.41142857142859,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 10,
+              "requestCount": 30078,
+              "throughputRps": 1002.3393249528905,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 8.4755,
+              "p95LatencyMs": 18.131749999999993,
+              "p99LatencyMs": 28.175129999999992,
+              "meanLatencyMs": 9.87590009309127,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 128,
+                    "memUsage": "42.8MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.83,
+                    "memUsage": "44.65MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.81,
+                    "memUsage": "45.48MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 118.89,
+                    "memUsage": "46.38MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 125.13,
+                    "memUsage": "47.71MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 128.41,
+                    "memUsage": "51.33MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 126.35,
+                    "memUsage": "52.16MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.71,
+                    "memUsage": "53.48MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 128.59,
+                    "memUsage": "55.71MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 127.76,
+                    "memUsage": "56.78MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.69,
+                    "memUsage": "60.05MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.73,
+                    "memUsage": "59.96MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.97,
+                    "memUsage": "63.86MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 57.89,
+                    "memUsage": "66.95MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 120.41142857142859,
+                "maxCpuPercent": 128.59,
+                "lastMemUsage": "66.95MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 10,
+              "requestCount": 28178,
+              "throughputRps": 939.122855653371,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 8.6005,
+              "p95LatencyMs": 21.75519999999999,
+              "p99LatencyMs": 39.559219999999996,
+              "meanLatencyMs": 10.543135211867385,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 121.01,
+                    "memUsage": "62.37MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.54,
+                    "memUsage": "64.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 122.88,
+                    "memUsage": "67.31MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.2,
+                    "memUsage": "69.35MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.91,
+                    "memUsage": "71.32MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.87,
+                    "memUsage": "72.35MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.85,
+                    "memUsage": "75.21MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 128.45,
+                    "memUsage": "78.07MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.42,
+                    "memUsage": "78.64MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 120.08,
+                    "memUsage": "81.43MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.14,
+                    "memUsage": "80.64MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.39,
+                    "memUsage": "84.63MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.58,
+                    "memUsage": "87.18MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 67.87,
+                    "memUsage": "87.54MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 118.37071428571429,
+                "maxCpuPercent": 128.45,
+                "lastMemUsage": "87.54MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 10,
+              "requestCount": 19360,
+              "throughputRps": 644.97550092542,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 10.3845,
+              "p95LatencyMs": 31.331699999999955,
+              "p99LatencyMs": 86.64517999999993,
+              "meanLatencyMs": 15.378174845041384,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 128.43,
+                    "memUsage": "85.73MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.04,
+                    "memUsage": "88.14MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 114.11,
+                    "memUsage": "87.34MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 134.07,
+                    "memUsage": "87.63MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.78,
+                    "memUsage": "89.48MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 117.66,
+                    "memUsage": "90.22MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121.98,
+                    "memUsage": "92.64MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 119.95,
+                    "memUsage": "93.53MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 112.94,
+                    "memUsage": "94.02MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.38,
+                    "memUsage": "95.88MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 121,
+                    "memUsage": "97.14MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 136.88,
+                    "memUsage": "98.9MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 137.73,
+                    "memUsage": "98.85MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 123.30384615384618,
+                "maxCpuPercent": 137.73,
+                "lastMemUsage": "98.85MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T20:52:11.283Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "adaptive",
+              "DISABLED_RULES": "",
+              "EXPERIMENT_RUN_LABEL": "perf-C",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "C",
+            "concurrency": 10
+          }
+        },
+        {
+          "concurrency": 25,
+          "repeatCount": 3,
+          "throughputRpsMedian": 179.73718422109266,
+          "throughputRpsIqr": [
+            46.948464068444935,
+            961.4525467521833
+          ],
+          "throughputRpsMean": 396.0460650139069,
+          "throughputRpsStddev": 494.13720588889726,
+          "p50LatencyMsMedian": 43.79,
+          "p95LatencyMsMedian": 304.9998,
+          "p95LatencyMsIqr": [
+            47.406999999999925,
+            804.6267499999999
+          ],
+          "p95LatencyMsMean": 385.67785,
+          "p95LatencyMsStddev": 385.0027899397191,
+          "meanCpuPercentMedian": 153.283,
+          "totalBlockedByGatewayCount": 0,
+          "repetitions": [
+            {
+              "concurrency": 25,
+              "requestCount": 29096,
+              "throughputRps": 961.4525467521833,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 19.629,
+              "p95LatencyMs": 47.406999999999925,
+              "p99LatencyMs": 131.72514999999984,
+              "meanLatencyMs": 25.797740376684047,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 135.38,
+                    "memUsage": "44.69MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 133.73,
+                    "memUsage": "49.22MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 128.25,
+                    "memUsage": "51.2MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 136.03,
+                    "memUsage": "53.36MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 131.38,
+                    "memUsage": "54.66MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 132.35,
+                    "memUsage": "57.98MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 141.77,
+                    "memUsage": "60.37MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 137.36,
+                    "memUsage": "63.76MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 141.5,
+                    "memUsage": "66.77MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 140.35,
+                    "memUsage": "67.47MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 123.55,
+                    "memUsage": "71.14MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 132.39,
+                    "memUsage": "73.14MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 143.03,
+                    "memUsage": "73.08MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 135.15923076923076,
+                "maxCpuPercent": 143.03,
+                "lastMemUsage": "73.08MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 25,
+              "requestCount": 5399,
+              "throughputRps": 179.73718422109266,
+              "errorCount": 0,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 43.79,
+              "p95LatencyMs": 304.9998,
+              "p99LatencyMs": 2974.6352399999996,
+              "meanLatencyMs": 138.4700307464349,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 128.39,
+                    "memUsage": "75.29MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 108.97,
+                    "memUsage": "75.5MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 226.22,
+                    "memUsage": "75.93MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 127.25,
+                    "memUsage": "76.92MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 328.9,
+                    "memUsage": "76.87MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 116.31,
+                    "memUsage": "77.86MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 140.28,
+                    "memUsage": "76.07MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 133.92,
+                    "memUsage": "77.37MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 124.32,
+                    "memUsage": "77.53MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 98.27,
+                    "memUsage": "77.78MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 153.283,
+                "maxCpuPercent": 328.9,
+                "lastMemUsage": "77.78MiB / 512MiB"
+              }
+            },
+            {
+              "concurrency": 25,
+              "requestCount": 1870,
+              "throughputRps": 46.948464068444935,
+              "errorCount": 14,
+              "blockedByGatewayCount": 0,
+              "p50LatencyMs": 75.11,
+              "p95LatencyMs": 804.6267499999999,
+              "p99LatencyMs": 22627.27608,
+              "meanLatencyMs": 515.5845187165772,
+              "engine": "k6",
+              "cpu": {
+                "samples": [
+                  {
+                    "cpuPercent": 186.09,
+                    "memUsage": "77.93MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 131.38,
+                    "memUsage": "78.09MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 139.13,
+                    "memUsage": "79.3MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 135.41,
+                    "memUsage": "79.09MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 162.43,
+                    "memUsage": "79.52MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 133.47,
+                    "memUsage": "83.35MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 190.94,
+                    "memUsage": "77.4MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 357.42,
+                    "memUsage": "77.69MiB / 512MiB"
+                  },
+                  {
+                    "cpuPercent": 147.08,
+                    "memUsage": "77.5MiB / 512MiB"
+                  }
+                ],
+                "meanCpuPercent": 175.9277777777778,
+                "maxCpuPercent": 357.42,
+                "lastMemUsage": "77.5MiB / 512MiB"
+              }
+            }
+          ],
+          "runMetadata": {
+            "capturedAt": "2026-10-04T21:02:36.493Z",
+            "gitCommit": "1e8ae65",
+            "liveGatewayConfig": {
+              "GATEWAY_MODE": "adaptive",
+              "DISABLED_RULES": "",
+              "EXPERIMENT_RUN_LABEL": "perf-C",
+              "R1_WEIGHT": "",
+              "R2_WEIGHT": "",
+              "R3_WEIGHT": "",
+              "R4_BASE_WEIGHT": "",
+              "R5_WEIGHT": "",
+              "R3_WINDOW_SECONDS": "",
+              "R3_THRESHOLD": "",
+              "R4_WINDOW_SECONDS": "",
+              "R4_THRESHOLD": "",
+              "R4_EXPONENTIAL_FACTOR": "",
+              "TIER1_MAX": "",
+              "TIER2_MAX": "",
+              "TIER3_MAX": "",
+              "BLOCKLIST_TTL_SECONDS": "",
+              "T2_DELAY_MS": "",
+              "T3_FORWARD_RATIO": "",
+              "T3_DELAY_MS": ""
+            },
+            "armId": "C",
+            "concurrency": 25
+          }
+        }
+      ]
+    }
+  ]
+}

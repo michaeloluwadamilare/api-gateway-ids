@@ -3,14 +3,7 @@
 Gateway-level, rule-based intrusion detection for REST APIs - MSc Cybersecurity
 dissertation project (University of Plymouth).
 
-This repo currently implements the Phase 1 + first security-functionality
-sprint: a Docker Compose environment with a JWT-enforcing gateway, the R1
-(SQL/NoSQL injection) detection rule, and Redis-backed composite-identity
-request state, in front of a stub backend. The composite-identity cumulative
-scoring/tier engine, the remaining rules (R2 as a scored rule, R3-R5), and
-the Postgres audit log are not built yet - see
-[`docs/api-endpoints.md`](docs/api-endpoints.md) for what's in and out of
-scope right now, and the dissertation proposal for the full design.
+This repo currently implements IDS
 
 ## Layout
 
@@ -147,10 +140,3 @@ A Jest suite covering JWT verification (valid/expired/tampered/forged
 tokens), R1's signature matching and block decision, R5's sequential-run
 heuristic, and Redis-backed composite scoring - all mocked at the Redis
 client boundary, so it runs without a live Redis instance or containers.
-See `docs/implementation-draft.md` §4.7 for what is and isn't covered.
-
-## Next up
-
-Per supervisor feedback (Sprint 1 review): ethics update (PEOS), then Phase 2
-design sign-off before the rule engine (R1-R5) and Redis-backed scoring are
-built on top of this skeleton.

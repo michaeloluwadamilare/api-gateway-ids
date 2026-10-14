@@ -19,6 +19,7 @@ async function compositeState(req, res, next) {
   }
 }
 
+
 async function recordRuleTrigger(identity, ruleId, weight) {
   const scoreKey = `idscore:${identity}`;
   const score = await redisClient.incrBy(scoreKey, weight);
@@ -26,4 +27,25 @@ async function recordRuleTrigger(identity, ruleId, weight) {
   return score;
 }
 
-module.exports = { compositeState, recordRuleTrigger, OBSERVATION_WINDOW_SECONDS };
+async function getScore(identity) {
+  const raw = await redisClient.get(`idscore:${identity}`);
+  return raw ? Number(raw) : 0;
+}
+
+async function isBlocklisted(identity) {
+  const value = await redisClient.get(`idblock:${identity}`);
+  return value !== null;
+}
+
+async function blocklistIdentity(identity, ttlSeconds) {
+  await redisClient.set(`idblock:${identity}`, '1', { EX: ttlSeconds });
+}
+
+module.exports = {
+  compositeState,
+  recordRuleTrigger,
+  getScore,
+  isBlocklisted,
+  blocklistIdentity,
+  OBSERVATION_WINDOW_SECONDS,
+};

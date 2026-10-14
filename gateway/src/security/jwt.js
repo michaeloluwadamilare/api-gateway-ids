@@ -10,8 +10,7 @@ function loadPublicKey() {
 
 const publicKey = loadPublicKey();
 
-// Pinning `algorithms` to RS256 is the RFC 8725 fix for `none`-alg and
-// RS256/HS256 confusion attacks - both are rejected here before decoding.
+
 function verifyToken(token) {
   try {
     const decoded = jwt.verify(token, publicKey, { algorithms: ['RS256'] });
@@ -26,4 +25,12 @@ function verifyToken(token) {
   }
 }
 
-module.exports = { verifyToken };
+function decodeUnverified(token) {
+  try {
+    return jwt.decode(token);
+  } catch {
+    return null;
+  }
+}
+
+module.exports = { verifyToken, decodeUnverified };

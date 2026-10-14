@@ -2,11 +2,19 @@ const mockRedisClient = {
   incr: jest.fn(),
   incrBy: jest.fn(),
   expire: jest.fn(),
+  get: jest.fn(),
+  set: jest.fn(),
 };
 
 jest.mock('../../src/redisClient', () => ({ redisClient: mockRedisClient }));
 
-const { compositeState, recordRuleTrigger } = require('../../src/middleware/compositeState');
+const {
+  compositeState,
+  recordRuleTrigger,
+  getScore,
+  isBlocklisted,
+  blocklistIdentity,
+} = require('../../src/middleware/compositeState');
 
 function makeReqRes({ ip = '203.0.113.4', auth } = {}) {
   const req = { ip, auth };
@@ -79,5 +87,40 @@ describe('recordRuleTrigger (composite-identity scoring)', () => {
 
     expect(first).toBe(50);
     expect(second).toBe(100);
+  });
+});
+
+describe('getScore', () => {
+  test('returns the current cumulative score as a number', async () => {
+    mockRedisClient.get.mockResolvedValue('65');
+
+    expect(await getScore('203.0.113.4:1')).toBe(65);
+    expect(mockRedisClient.get).toHaveBeenCalledWith('idscore:203.0.113.4:1');
+  });
+
+  test('returns 0 for an identity with no recorded score', async () => {
+    mockRedisClient.get.mockResolvedValue(null);
+
+    expect(await getScore('203.0.113.4:1')).toBe(0);
+  });
+});
+
+describe('blocklistIdentity / isBlocklisted', () => {
+  test('blocklistIdentity sets a TTL-bound key', async () => {
+    await blocklistIdentity('203.0.113.4:1', 600);
+
+    expect(mockRedisClient.set).toHaveBeenCalledWith('idblock:203.0.113.4:1', '1', { EX: 600 });
+  });
+
+  test('isBlocklisted is true when the key exists', async () => {
+    mockRedisClient.get.mockResolvedValue('1');
+
+    expect(await isBlocklisted('203.0.113.4:1')).toBe(true);
+  });
+
+  test('isBlocklisted is false when the key is absent', async () => {
+    mockRedisClient.get.mockResolvedValue(null);
+
+    expect(await isBlocklisted('203.0.113.4:1')).toBe(false);
   });
 });

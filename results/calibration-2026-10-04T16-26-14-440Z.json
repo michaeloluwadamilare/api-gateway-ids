@@ -1,0 +1,113 @@
+{
+  "legitimate": {
+    "count": 504,
+    "maxScore": 0,
+    "meanScore": 0,
+    "tierCounts": {
+      "T1": 504
+    },
+    "blockedCount": 0
+  },
+  "attacks": {
+    "R1": {
+      "category": "sql_nosql_injection",
+      "runs": 5,
+      "count": 100,
+      "maxScore": 100,
+      "meanScore": 75,
+      "tierCounts": {
+        "T2": 5,
+        "T4": 5
+      },
+      "blockedCount": 95,
+      "medianRequestsToEscalation": 1,
+      "p95LatencyMs": 2812.032
+    },
+    "R2": {
+      "category": "jwt_manipulation",
+      "runs": 5,
+      "count": 100,
+      "maxScore": null,
+      "meanScore": null,
+      "tierCounts": {},
+      "blockedCount": 100,
+      "medianRequestsToEscalation": null,
+      "p95LatencyMs": 2355.292666
+    },
+    "R3": {
+      "category": "rate_abuse",
+      "runs": 5,
+      "count": 600,
+      "maxScore": 90,
+      "meanScore": 2.857142857142857,
+      "tierCounts": {
+        "T1": 305,
+        "T2": 5,
+        "T4": 5
+      },
+      "blockedCount": 290,
+      "medianRequestsToEscalation": 62,
+      "p95LatencyMs": 2480.888917
+    },
+    "R4": {
+      "category": "credential_stuffing",
+      "runs": 5,
+      "count": 75,
+      "maxScore": 120,
+      "meanScore": 20,
+      "tierCounts": {
+        "T1": 30,
+        "T2": 5,
+        "T4": 5
+      },
+      "blockedCount": 40,
+      "medianRequestsToEscalation": 7,
+      "p95LatencyMs": 2014.843125
+    },
+    "R5": {
+      "category": "bola_id_enumeration",
+      "runs": 5,
+      "count": 100,
+      "maxScore": 105,
+      "meanScore": 42,
+      "tierCounts": {
+        "T1": 10,
+        "T2": 5,
+        "T3": 5,
+        "T4": 5
+      },
+      "blockedCount": 85,
+      "medianRequestsToEscalation": 3,
+      "p95LatencyMs": 1883.909875
+    }
+  },
+  "runMetadata": {
+    "capturedAt": "2026-10-04T16:08:54.414Z",
+    "gitCommit": "1e8ae65",
+    "liveGatewayConfig": {
+      "GATEWAY_MODE": "adaptive",
+      "DISABLED_RULES": "",
+      "EXPERIMENT_RUN_LABEL": "calibration",
+      "R1_WEIGHT": "",
+      "R2_WEIGHT": "",
+      "R3_WEIGHT": "",
+      "R4_BASE_WEIGHT": "",
+      "R5_WEIGHT": "",
+      "R3_WINDOW_SECONDS": "",
+      "R3_THRESHOLD": "",
+      "R4_WINDOW_SECONDS": "",
+      "R4_THRESHOLD": "",
+      "R4_EXPONENTIAL_FACTOR": "",
+      "TIER1_MAX": "",
+      "TIER2_MAX": "",
+      "TIER3_MAX": "",
+      "BLOCKLIST_TTL_SECONDS": "",
+      "T2_DELAY_MS": "",
+      "T3_FORWARD_RATIO": "",
+      "T3_DELAY_MS": ""
+    },
+    "runLabel": "calibration",
+    "legitimateRequestTotal": 500,
+    "runsPerCategory": 5
+  }
+}

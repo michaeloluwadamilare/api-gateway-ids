@@ -1,7 +1,7 @@
 const { createClient } = require('redis');
 const { redisUrl } = require('./config');
 
-const redisClient = createClient({ url: redisUrl });
+const redisClient = createClient({ url: redisUrl, disableOfflineQueue: true });
 
 redisClient.on('error', (err) => console.error('[gateway] Redis client error:', err.message));
 

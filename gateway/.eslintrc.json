@@ -1,0 +1,24 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "script"
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "rules": {
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_|^next$" }],
+    "no-console": "off"
+  },
+  "overrides": [
+    {
+      "files": ["test/**/*.js"],
+      "plugins": ["jest"],
+      "env": { "jest": true },
+      "extends": ["plugin:jest/recommended"]
+    }
+  ]
+}

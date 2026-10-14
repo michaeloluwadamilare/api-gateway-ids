@@ -1,4 +1,4 @@
-// Curated, OWASP-CRS-inspired subset, not the full ruleset.
+// Curated, OWASP-CRS-inspired subset.
 const SIGNATURES = [
   { id: 'sql-union-select', regex: /\bunion\b[\s\S]{0,40}\bselect\b/i },
   { id: 'sql-tautology', regex: /\bor\b\s+['"]?\d+['"]?\s*=\s*['"]?\d+['"]?/i },

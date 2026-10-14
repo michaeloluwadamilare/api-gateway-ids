@@ -1,1 +1,0 @@
-{"timestamp":"2026-08-21T15:58:49.152Z","requestId":"361697e4-106b-4a95-89f4-3f2c43b31042","ruleId":"R2","category":"missing_token","action":"blocked","reason":"no Bearer token provided","method":"GET","path":"/api/accounts/1","ip":"::ffff:192.168.65.1"}

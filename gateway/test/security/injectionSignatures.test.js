@@ -2,7 +2,7 @@ const { matchInjectionSignature } = require('../../src/security/injectionSignatu
 
 describe('matchInjectionSignature (R1)', () => {
   test.each([
-    ['sql-union-select', "1 UNION SELECT username, password FROM users"],
+    ['sql-union-select', '1 UNION SELECT username, password FROM users'],
     ['sql-tautology', "' OR '1'='1"],
     ['sql-comment-terminator', "admin'--"],
     ['sql-stacked-query', '1; DROP TABLE users'],
@@ -13,14 +13,12 @@ describe('matchInjectionSignature (R1)', () => {
     expect(matchInjectionSignature(payload)).toBe(expectedId);
   });
 
-  test.each([
-    'Tesco Superstore',
-    'alice@example.com',
-    'a normal transaction description',
-    '',
-  ])('does not flag legitimate text: %j', (text) => {
-    expect(matchInjectionSignature(text)).toBeNull();
-  });
+  test.each(['Tesco Superstore', 'alice@example.com', 'a normal transaction description', ''])(
+    'does not flag legitimate text: %j',
+    (text) => {
+      expect(matchInjectionSignature(text)).toBeNull();
+    }
+  );
 
   test('matches the first signature that hits, deterministically', () => {
     // contains both a tautology and a comment terminator

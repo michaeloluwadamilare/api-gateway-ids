@@ -1,0 +1,15 @@
+{
+  "name": "api-ids-experiment-harness",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Calibration, A/B/C comparative experiment, ablation, and performance harness for the gateway-IDS. Zero dependencies - Node's built-in fetch/crypto/child_process only.",
+  "scripts": {
+    "calibrate": "node calibrate.js",
+    "experiment": "node runExperiment.js",
+    "ablation": "node runAblation.js",
+    "performance": "node runPerformance.js",
+    "validate-r3": "node validateR3.js",
+    "validate-multivector": "node validateMultiVector.js",
+    "validate-distributed-stuffing": "node validateDistributedStuffing.js"
+  }
+}

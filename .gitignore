@@ -3,7 +3,13 @@ npm-debug.log*
 .env
 .env.*
 !.env.example
-logs/*.log
+**/logs/*.log
 .DS_Store
 dist/
 coverage/
+# results/*.json
+# !results/.gitkeep
+scripts/tools/jwt_tool/
+gateway/logs/access.log
+gateway/logs/security.log
+*.log

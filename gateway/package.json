@@ -1,25 +1,37 @@
 {
   "name": "api-ids-gateway",
   "version": "0.1.0",
-  "description": "Gateway skeleton for the dissertation IDS - currently just health check, request logging, and pass-through proxying to the backend",
+  "description": "Gateway-level rule-based IDS for the dissertation - JWT enforcement, R1-R5 detection rules, composite scoring, tier-based policy engine, tamper-evident Postgres audit log",
   "private": true,
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "test": "jest"
+    "test": "jest",
+    "verify-audit-chain": "node src/audit/verifyChain.js",
+    "lint": "eslint src test",
+    "lint:fix": "eslint src test --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
+    "cors": "^2.8.6",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "helmet": "^7.2.0",
     "http-proxy-middleware": "^2.0.6",
     "jsonwebtoken": "^9.0.3",
     "morgan": "^1.10.0",
+    "pg": "^8.23.0",
     "redis": "^4.7.1",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-jest": "^28.14.0",
     "jest": "^29.7.0",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "prettier": "^3.9.9"
   }
 }

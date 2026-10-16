@@ -1,7 +1,7 @@
 # api-gateway-ids
 
 Gateway-level, rule-based intrusion detection for REST APIs — MSc Cybersecurity
-dissertation project (University of Plymouth).
+Dissertation project (University of Plymouth).
 
 An Express API gateway sits in front of a deliberately vulnerable banking API
 and inspects every request with five detection rules mapped to the OWASP API
@@ -34,7 +34,7 @@ condition and measures detection accuracy and latency overhead.
 ## Architecture
 
 ```
-  clients / attack scripts / legitimate traffic (scripts/)
+  clients/attack scripts / legitimate traffic (scripts/)
                          │
                          ▼
                ┌───────────────────┐        ┌────────────────────────────┐
@@ -49,7 +49,7 @@ condition and measures detection accuracy and latency overhead.
                          │ allowed          └────────────────────────────┘
                          ▼                               ▲
                ┌───────────────────┐                     │
-               │  backend  :4000   │─────────────────────┘
+               │  backend:4000   │─────────────────────┘
                │  banking REST API │
                └───────────────────┘
 ```
@@ -76,7 +76,7 @@ requestId → auditLog → access log → JSON body parser
 ```
 backend/            Vulnerable banking API (Express + Postgres), signs RS256 JWTs
 gateway/            The IDS gateway
-  src/middleware/   One file per pipeline stage / detection rule
+  src/middleware/   One file per pipeline stage/detection rule
   src/security/     JWT verification, injection signatures, identity, R4 logic
   src/audit/        Hash-chained audit logger + chain verifier
   test/             Jest unit tests (Redis and Postgres mocked)

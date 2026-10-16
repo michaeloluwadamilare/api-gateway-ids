@@ -121,7 +121,7 @@ This is the recommended way to run the project.
 ### Step 1 — Clone the repository
 
 ```bash
-git clone <repository-url> api-gateway-ids
+git clone https://github.com/michaeloluwadamilare/api-gateway-ids.git
 cd api-gateway-ids
 ```
 

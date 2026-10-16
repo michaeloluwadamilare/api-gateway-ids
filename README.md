@@ -498,6 +498,7 @@ node runAblation.js 5
 
 # 6. Performance overhead (requires k6)
 npm run performance
+node runPerformance
 
 # 7. Targeted validation scenarios
 npm run validate-r3

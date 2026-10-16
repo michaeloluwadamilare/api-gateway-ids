@@ -356,11 +356,11 @@ docker compose exec postgres psql -U postgres -d api_ids_db \
 | **R1** | SQL / NoSQL injection | 7 OWASP-CRS-inspired regexes over decoded URL, query and body ([injectionSignatures.js](gateway/src/security/injectionSignatures.js)) | 50 |
 | **R2** | Broken authentication — JWT abuse (API2) | RS256-only verification with the public key; rejects missing, expired, `alg:none`, RS256→HS256 confusion and forged tokens ([jwt.js](gateway/src/security/jwt.js)) | 50 |
 | **R3** | Rate abuse / flooding (API4) | Per-identity counter: more than 60 requests in 10 s ([rateAbuseDetection.js](gateway/src/middleware/rateAbuseDetection.js)) | 30 |
-| **R4** | Credential stuffing / brute force (API2) | Counts consecutive login 401s; after 5, weight grows exponentially (40, 80, 160…); success resets ([credentialStuffing.js](gateway/src/security/credentialStuffing.js)) | 40 base |
+| **R4** | Credential stuffing / brute force (API2) | Counts consecutive login 401s; after 5, weight grows exponentially (40, 80, 160…); success resets ([credentialStuffing.js](gateway/src/security/credentialStuffing.js)) | 40 |
 | **R5** | BOLA / sequential ID enumeration (API1) | Last 3 IDs requested under `/api/users/:id` or `/api/accounts/:id` are consecutive ([enumerationDetection.js](gateway/src/middleware/enumerationDetection.js)) | 35 |
 
-Requests are tracked by a **composite identity** — `<client ip>:<JWT sub or "anon">`
-— so users behind a shared IP aren't lumped together, and an attacker can't
+Requests are tracked by a **composite identity**  `<client ip>:<JWT sub or "anon">`
+ so users behind a shared IP aren't lumped together, and an attacker can't
 shed their history just by switching accounts.
 
 ---

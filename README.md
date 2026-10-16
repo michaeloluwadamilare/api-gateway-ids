@@ -1,12 +1,12 @@
 # api-gateway-ids
 
-Gateway-level, rule-based intrusion detection for REST APIs — MSc Cybersecurity
+Gateway-level, rule-based intrusion detection for REST APIs - MSc Cybersecurity
 Dissertation project (University of Plymouth).
 
 An Express API gateway sits in front of a deliberately vulnerable banking API
 and inspects every request with five detection rules mapped to the OWASP API
-Security Top 10. It can run in two modes — **static** (block on first rule hit)
-and **adaptive** (accumulate a per-identity risk score and respond in tiers) —
+Security Top 10. It can run in two modes: **static** (block on first rule hit)
+and **adaptive** (accumulate a per-identity risk score and respond in tiers) -
 and ships with an experiment harness that attacks the system under each
 condition and measures detection accuracy and latency overhead.
 

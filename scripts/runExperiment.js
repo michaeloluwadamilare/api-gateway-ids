@@ -86,12 +86,7 @@ async function runCondition(letter, ruleId, repetitions, { disabledRules = '', r
   let runMetadata;
   if (CONDITIONS[letter].gatewayMode) {
     // disabledRules must be passed through here, not set by a separate
-    // setGatewayConfig() call before runCondition() runs - this function
-    // always calls setGatewayConfig itself (every condition/category needs
-    // its own runLabel), so a prior call's config gets silently clobbered
-    // back to disabledRules='' otherwise. This was runAblation.js's actual
-    // bug: it set DISABLED_RULES correctly, then runCondition immediately
-    // overwrote it back to empty on its very next setGatewayConfig call.
+    // setGatewayConfig() call before runCondition() runs
     await setGatewayConfig({ gatewayMode: CONDITIONS[letter].gatewayMode, disabledRules, runLabel: label });
     runMetadata = captureRunMetadata({ runLabel: label });
   } else {

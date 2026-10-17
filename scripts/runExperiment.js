@@ -28,17 +28,7 @@ const ATTACKS = {
     return runSqlInjection(baseUrl, token, { forwardedFor: ATTACKER_USER.ip });
   },
   R2: async (baseUrl) => runJwtManipulation(baseUrl),
-  // R3's formal category uses rateFlood.js, not Table 4's literal Hydra
-  // reproduction (scripts/attacks/bruteForce.js) - confirmed both
-  // mathematically and via the ablation study that login-brute-force
-  // traffic can never reach R3's own threshold before R4's gate/scoring
-  // preempts it, at any attack rate or scale (R4's threshold is an
-  // absolute failure count reached in under a second; R3's requires
-  // several uninterrupted seconds of traffic the client never gets to
-  // send once R4 acts). See docs/methodology-chapter3.md §2/§5/§8 for the
-  // full attribution note - bruteForce.js is kept as a standalone script
-  // for Table-4-fidelity documentation of that finding, not as this
-  // category's detector.
+
   R3: async (baseUrl) => {
     const { token } = await login(baseUrl, ATTACKER_USER.email, ATTACKER_USER.password, ATTACKER_USER.ip);
     return runRateFlood(baseUrl, token, ATTACKER_USER.id, { forwardedFor: ATTACKER_USER.ip });

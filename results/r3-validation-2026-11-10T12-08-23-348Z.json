@@ -1,0 +1,4924 @@
+{
+  "generatedAt": "2026-11-10T12:07:53.993Z",
+  "purpose": "Supplementary R3 validation - see header comment for why this is separate from the formal experiment harness.",
+  "runs": [
+    {
+      "mode": "static",
+      "summary": {
+        "totalRequests": 120,
+        "firstBlockedAtRequest": 61,
+        "firstBlockedRuleId": "R3",
+        "firstBlockedReason": "rate_threshold_exceeded",
+        "blockedCount": 60,
+        "maxScore": 0,
+        "tiersSeen": []
+      },
+      "observations": [
+        {
+          "timestamp": "2026-11-10T12:07:59.441Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.3205,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:07:59.491Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 8.138083,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:07:59.544Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.215584,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:07:59.596Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.287875,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:07:59.654Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 16.76425,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:07:59.708Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.499792,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:07:59.763Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 14.023458,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:07:59.822Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.945417,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:07:59.878Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.106167,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:07:59.936Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 16.538834,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:07:59.996Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 17.696458,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.053Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 16.284875,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.114Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 20.308125,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.167Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.836708,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.223Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 14.969916,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.282Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 17.135125,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.341Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 18.058292,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.398Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.653833,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.455Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.493083,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.513Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.742417,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.568Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.48575,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.624Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 14.348417,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.682Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 16.159667,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.740Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 17.121875,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.799Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 17.42,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.856Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.898875,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.917Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 18.611208,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:00.974Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 16.639042,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.034Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 17.961417,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.091Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 16.584667,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.149Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.468292,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.206Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.864375,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.265Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 18.164125,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.321Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 14.891166,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.377Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.88175,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.435Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 16.48525,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.493Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 16.558667,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.551Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.862709,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.608Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 16.019375,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.664Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.550791,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.719Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 14.866208,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.778Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 17.14625,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.836Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 16.558958,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.892Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 14.891958,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:01.947Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.57725,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.007Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 18.061,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.063Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.894625,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.118Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.393916,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.175Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.062583,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.232Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 16.670417,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.292Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 17.740084,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.351Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 16.483417,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.407Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.66425,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.467Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 17.721875,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.522Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 14.409792,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.575Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.238417,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.630Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 14.051833,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.685Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.173083,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.741Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 14.416667,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.799Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.659042,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.852Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.071167,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.906Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 12.023208,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:02.958Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.673209,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.011Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.6755,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.062Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 8.565167,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.112Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 8.593208,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.162Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 9.870125,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.214Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.540417,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.266Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.652542,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.319Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.1995,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.370Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.352959,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.423Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.719292,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.473Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 9.437,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.525Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.657458,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.578Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.803625,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.628Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 9.24625,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.676Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 6.286208,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.725Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 7.267916,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.774Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 7.374333,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.823Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 8.26975,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.871Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 7.110417,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.920Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 6.854792,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:03.970Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 9.062917,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.020Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 8.797584,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.071Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 8.969709,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.121Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 8.845667,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.172Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.991958,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.225Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.084458,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.277Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.391041,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.332Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 15.0175,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.386Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 12.279042,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.438Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.998416,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.490Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.337291,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.544Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.171291,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.595Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 9.543834,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.646Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.138083,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.699Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.232666,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.751Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.790583,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.805Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 12.315208,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.858Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.313917,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.913Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.087209,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:04.968Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.219166,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.023Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.013125,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.075Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.245166,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.124Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 7.320458,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.176Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.702667,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.229Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.419166,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.281Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.874625,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.336Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.132209,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.388Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.328792,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.440Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.736334,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.493Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.777084,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.548Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.168333,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.601Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.862834,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.655Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 12.618625,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.708Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.929667,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.761Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.609708,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.814Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 12.136792,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.867Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 12.2955,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:05.919Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 429,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.482084,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "R3",
+            "reason": "rate_threshold_exceeded"
+          },
+          "detected": true
+        }
+      ]
+    },
+    {
+      "mode": "adaptive",
+      "summary": {
+        "totalRequests": 120,
+        "firstBlockedAtRequest": 63,
+        "firstBlockedRuleId": "TIER",
+        "firstBlockedReason": "critical_risk_score",
+        "blockedCount": 58,
+        "maxScore": 90,
+        "tiersSeen": [
+          "T1",
+          "T2",
+          "T4"
+        ]
+      },
+      "observations": [
+        {
+          "timestamp": "2026-11-10T12:08:11.405Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 8.648708,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:11.454Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 7.930125,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:11.506Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 11.128875,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:11.558Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 10.927,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:11.615Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.181833,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:11.671Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 14.35325,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:11.730Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 17.545791,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:11.787Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.076041,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:11.847Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 18.312042,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:11.905Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.338958,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:11.963Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.117083,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.021Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 17.216834,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.079Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 17.205,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.136Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 15.45325,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.195Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.728458,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.253Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.285083,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.310Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 15.897041,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.369Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 17.456625,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.428Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 17.071083,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.485Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 15.559958,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.543Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 17.049541,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.595Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 10.722292,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.648Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 11.344334,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.702Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 11.783125,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.758Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 14.7875,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.816Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.620208,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.874Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 15.557417,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.930Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 14.81575,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:12.989Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.898708,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.047Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 17.156333,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.104Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 15.529292,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.161Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.746791,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.219Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.352416,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.276Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.073958,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.335Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.835875,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.393Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.440375,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.450Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.131375,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.508Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 15.846458,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.566Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 17.200416,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.621Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 13.818917,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.679Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.36125,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.736Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 15.294584,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.793Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 14.933541,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.851Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.827375,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.911Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 18.362833,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:13.967Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.343125,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.026Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 17.257583,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.083Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 15.254875,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.140Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 14.969667,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.197Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.783042,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.253Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 15.065958,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.309Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 13.827625,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.365Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 14.79375,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.420Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 14.077209,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.476Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 14.475458,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.533Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 15.230834,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.589Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 15.443416,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.647Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 15.9265,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.702Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 14.565875,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.760Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0,
+          "latencyMs": 16.06725,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:14.819Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 30,
+          "latencyMs": 17.907542,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.031Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 200,
+          "tier": "T2",
+          "score": 60,
+          "latencyMs": 171.876,
+          "body": [
+            {
+              "id": 2,
+              "accountId": 1,
+              "amount": "-15.00",
+              "description": "TfL Travel",
+              "createdAt": "2026-07-02T08:03:00.000Z"
+            },
+            {
+              "id": 1,
+              "accountId": 1,
+              "amount": "-42.50",
+              "description": "Tesco Superstore",
+              "createdAt": "2026-07-01T09:12:00.000Z"
+            }
+          ],
+          "detected": false
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.088Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": "T4",
+          "score": 90,
+          "latencyMs": 14.703542,
+          "body": {
+            "error": "blocked by IDS",
+            "ruleId": "TIER",
+            "tier": "T4",
+            "reason": "critical_risk_score"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.138Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 8.354417,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.189Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.524333,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.239Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.07475,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.294Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.083125,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.346Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.326666,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.399Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.321625,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.451Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.881334,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.504Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.95375,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.556Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.406292,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.608Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 9.841875,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.658Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 9.254167,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.707Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 6.901459,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.756Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 7.748375,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.805Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 8.004333,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.852Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 4.932625,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.898Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 5.30475,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.945Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 5.876917,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:15.996Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 9.030458,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.048Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.415584,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.098Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 9.067209,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.148Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 8.161583,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.203Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.277541,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.254Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.404917,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.308Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 12.018292,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.363Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.2265,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.416Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.795834,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.469Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.204958,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.521Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.085416,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.573Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.802041,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.625Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.242292,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.677Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.836166,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.726Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 9.440208,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.779Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.378541,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.832Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.510041,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.885Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.64225,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.938Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.525792,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:16.990Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.617583,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.042Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.880709,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.093Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 9.498167,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.139Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 5.436208,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.185Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 6.3305,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.231Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 5.097541,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.277Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 5.382125,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.324Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 6.2015,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.372Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 7.874709,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.422Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 8.127958,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.472Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 9.189083,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.522Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.761625,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.577Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 13.508166,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.629Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.865875,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.681Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.815708,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.734Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.698,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.784Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 8.436584,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.833Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 9.1215,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.885Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 10.789917,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.938Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.019458,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        },
+        {
+          "timestamp": "2026-11-10T12:08:17.991Z",
+          "url": "http://localhost:8080/api/accounts/1/transactions",
+          "method": "GET",
+          "statusCode": 403,
+          "tier": null,
+          "score": null,
+          "latencyMs": 11.608083,
+          "body": {
+            "error": "blocked by IDS",
+            "reason": "identity_blocklisted"
+          },
+          "detected": true
+        }
+      ]
+    }
+  ]
+}

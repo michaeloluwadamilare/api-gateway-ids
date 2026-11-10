@@ -3,7 +3,9 @@ const { isDetectedResponse } = require('./config');
 async function timedRequest(url, options = {}) {
   const startedAt = process.hrtime.bigint();
   try {
-    const res = await fetch(url, options);
+    // fresh connection per request: reused keep-alive sockets through Docker Desktop's
+    // port forwarding add 0.45-3 s of idle latency, which slows the R3 flood below threshold
+    const res = await fetch(url, { ...options, headers: { Connection: 'close', ...options.headers } });
     const latencyMs = Number(process.hrtime.bigint() - startedAt) / 1e6;
     const tier = res.headers.get('x-ids-tier');
     const score = res.headers.get('x-ids-score');

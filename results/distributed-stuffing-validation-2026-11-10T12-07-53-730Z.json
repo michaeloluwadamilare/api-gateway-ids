@@ -1,0 +1,549 @@
+{
+  "gatewayMode": "static",
+  "concentrated": {
+    "summary": {
+      "totalRequests": 8,
+      "blockedCount": 2,
+      "firstBlockedAtRequest": 7,
+      "firstBlockedRuleId": "R4"
+    },
+    "observations": [
+      {
+        "timestamp": "2026-11-10T12:06:27.249Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 27.709541,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:29.266Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 16.065083,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:31.289Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 20.424292,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:33.313Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 21.135375,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:35.328Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 14.568,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:37.345Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 15.00825,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:39.360Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 429,
+        "tier": null,
+        "score": null,
+        "latencyMs": 13.732792,
+        "body": {
+          "error": "blocked by IDS",
+          "ruleId": "R4",
+          "reason": "credential_stuffing_threshold_exceeded"
+        },
+        "detected": true
+      },
+      {
+        "timestamp": "2026-11-10T12:06:41.377Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 429,
+        "tier": null,
+        "score": null,
+        "latencyMs": 14.981417,
+        "body": {
+          "error": "blocked by IDS",
+          "ruleId": "R4",
+          "reason": "credential_stuffing_threshold_exceeded"
+        },
+        "detected": true
+      }
+    ]
+  },
+  "distributed": {
+    "summary": {
+      "totalRequests": 32,
+      "blockedCount": 0,
+      "firstBlockedAtRequest": null,
+      "firstBlockedRuleId": null,
+      "identityCount": 8,
+      "attemptsPerIdentity": 4
+    },
+    "observations": [
+      {
+        "timestamp": "2026-11-10T12:06:43.668Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 52.215417,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:45.692Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 21.743334,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:47.720Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 26.138083,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:49.741Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 18.280209,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:51.761Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 18.781542,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:53.785Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 21.999709,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:55.807Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 19.236417,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:57.832Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 23.304875,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:59.854Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 20.634625,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:01.871Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 16.646958,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:03.892Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 18.699666,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:05.912Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 19.033833,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:07.935Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 19.847458,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:09.956Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 19.93925,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:11.975Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 17.667833,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:13.993Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 17.570041,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:16.013Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 17.749125,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:18.033Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 18.270125,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:20.052Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 17.467542,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:22.072Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 18.203875,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:24.092Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 17.945417,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:26.110Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 15.640417,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:28.131Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 20.167458,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:30.138Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 5.679542,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:32.158Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 18.445333,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:34.176Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 17.906416,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:36.197Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 19.115916,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:38.220Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 20.918083,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:40.239Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 17.956334,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:42.258Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 17.0815,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:44.280Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 19.609417,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:07:46.299Z",
+        "url": "http://localhost:8080/api/auth/login",
+        "method": "POST",
+        "statusCode": 401,
+        "tier": null,
+        "score": null,
+        "latencyMs": 18.650916,
+        "body": {
+          "error": "invalid credentials"
+        },
+        "detected": false
+      }
+    ]
+  }
+}

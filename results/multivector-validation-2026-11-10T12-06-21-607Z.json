@@ -1,0 +1,328 @@
+{
+  "r5Only": {
+    "name": "R5 alone (3 ascending enumeration requests)",
+    "summary": {
+      "totalRequests": 3,
+      "finalScore": 35,
+      "finalTier": "T2",
+      "finalStatusCode": 200,
+      "perRequest": [
+        {
+          "i": 1,
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0
+        },
+        {
+          "i": 2,
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0
+        },
+        {
+          "i": 3,
+          "statusCode": 200,
+          "tier": "T2",
+          "score": 35
+        }
+      ]
+    },
+    "observations": [
+      {
+        "timestamp": "2026-11-10T12:06:13.184Z",
+        "url": "http://localhost:8080/api/users/1",
+        "method": "GET",
+        "statusCode": 200,
+        "tier": "T1",
+        "score": 0,
+        "latencyMs": 10.70725,
+        "body": {
+          "id": 1,
+          "email": "alice@example.com",
+          "displayName": "Alice Ng"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:13.190Z",
+        "url": "http://localhost:8080/api/users/2",
+        "method": "GET",
+        "statusCode": 200,
+        "tier": "T1",
+        "score": 0,
+        "latencyMs": 6.145209,
+        "body": {
+          "id": 2,
+          "email": "bob@example.com",
+          "displayName": "Bob Idris"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:13.357Z",
+        "url": "http://localhost:8080/api/users/3",
+        "method": "GET",
+        "statusCode": 200,
+        "tier": "T2",
+        "score": 35,
+        "latencyMs": 166.011834,
+        "body": {
+          "id": 3,
+          "email": "chloe@example.com",
+          "displayName": "Chloe Okafor"
+        },
+        "detected": false
+      }
+    ]
+  },
+  "r1Only": {
+    "name": "R1 alone (1 injection probe)",
+    "summary": {
+      "totalRequests": 1,
+      "finalScore": 50,
+      "finalTier": "T2",
+      "finalStatusCode": 200,
+      "perRequest": [
+        {
+          "i": 1,
+          "statusCode": 200,
+          "tier": "T2",
+          "score": 50
+        }
+      ]
+    },
+    "observations": [
+      {
+        "timestamp": "2026-11-10T12:06:13.692Z",
+        "url": "http://localhost:8080/api/transactions/search?q='%20OR%20'1'%3D'1",
+        "method": "GET",
+        "statusCode": 200,
+        "tier": "T2",
+        "score": 50,
+        "latencyMs": 174.764416,
+        "body": [],
+        "detected": false
+      }
+    ]
+  },
+  "combined": {
+    "name": "R5 + R1 combined, same identity, same session (the actual multi-vector scenario)",
+    "summary": {
+      "totalRequests": 4,
+      "finalScore": 85,
+      "finalTier": "T3",
+      "finalStatusCode": 429,
+      "perRequest": [
+        {
+          "i": 1,
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0
+        },
+        {
+          "i": 2,
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0
+        },
+        {
+          "i": 3,
+          "statusCode": 200,
+          "tier": "T2",
+          "score": 35
+        },
+        {
+          "i": 4,
+          "statusCode": 429,
+          "tier": "T3",
+          "score": 85
+        }
+      ]
+    },
+    "observations": [
+      {
+        "timestamp": "2026-11-10T12:06:13.859Z",
+        "url": "http://localhost:8080/api/users/1",
+        "method": "GET",
+        "statusCode": 200,
+        "tier": "T1",
+        "score": 0,
+        "latencyMs": 11.807375,
+        "body": {
+          "id": 1,
+          "email": "alice@example.com",
+          "displayName": "Alice Ng"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:13.868Z",
+        "url": "http://localhost:8080/api/users/2",
+        "method": "GET",
+        "statusCode": 200,
+        "tier": "T1",
+        "score": 0,
+        "latencyMs": 9.474041,
+        "body": {
+          "id": 2,
+          "email": "bob@example.com",
+          "displayName": "Bob Idris"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:14.037Z",
+        "url": "http://localhost:8080/api/users/3",
+        "method": "GET",
+        "statusCode": 200,
+        "tier": "T2",
+        "score": 35,
+        "latencyMs": 168.740541,
+        "body": {
+          "id": 3,
+          "email": "chloe@example.com",
+          "displayName": "Chloe Okafor"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:14.914Z",
+        "url": "http://localhost:8080/api/transactions/search?q='%20OR%20'1'%3D'1",
+        "method": "GET",
+        "statusCode": 429,
+        "tier": "T3",
+        "score": 85,
+        "latencyMs": 774.12325,
+        "body": {
+          "error": "challenge required",
+          "ruleId": "TIER",
+          "tier": "T3",
+          "reason": "elevated_risk_score",
+          "retryAfterMs": 750
+        },
+        "detected": true
+      }
+    ]
+  },
+  "escalated": {
+    "name": "R5 + R1 + R1-again (a second, different injection payload - pushing past T4)",
+    "summary": {
+      "totalRequests": 5,
+      "finalScore": 135,
+      "finalTier": "T4",
+      "finalStatusCode": 403,
+      "perRequest": [
+        {
+          "i": 1,
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0
+        },
+        {
+          "i": 2,
+          "statusCode": 200,
+          "tier": "T1",
+          "score": 0
+        },
+        {
+          "i": 3,
+          "statusCode": 200,
+          "tier": "T2",
+          "score": 35
+        },
+        {
+          "i": 4,
+          "statusCode": 429,
+          "tier": "T3",
+          "score": 85
+        },
+        {
+          "i": 5,
+          "statusCode": 403,
+          "tier": "T4",
+          "score": 135
+        }
+      ]
+    },
+    "observations": [
+      {
+        "timestamp": "2026-11-10T12:06:15.083Z",
+        "url": "http://localhost:8080/api/users/1",
+        "method": "GET",
+        "statusCode": 200,
+        "tier": "T1",
+        "score": 0,
+        "latencyMs": 8.993333,
+        "body": {
+          "id": 1,
+          "email": "alice@example.com",
+          "displayName": "Alice Ng"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:15.090Z",
+        "url": "http://localhost:8080/api/users/2",
+        "method": "GET",
+        "statusCode": 200,
+        "tier": "T1",
+        "score": 0,
+        "latencyMs": 7.138542,
+        "body": {
+          "id": 2,
+          "email": "bob@example.com",
+          "displayName": "Bob Idris"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:15.255Z",
+        "url": "http://localhost:8080/api/users/3",
+        "method": "GET",
+        "statusCode": 200,
+        "tier": "T2",
+        "score": 35,
+        "latencyMs": 164.878542,
+        "body": {
+          "id": 3,
+          "email": "chloe@example.com",
+          "displayName": "Chloe Okafor"
+        },
+        "detected": false
+      },
+      {
+        "timestamp": "2026-11-10T12:06:16.126Z",
+        "url": "http://localhost:8080/api/transactions/search?q='%20OR%20'1'%3D'1",
+        "method": "GET",
+        "statusCode": 429,
+        "tier": "T3",
+        "score": 85,
+        "latencyMs": 769.112167,
+        "body": {
+          "error": "challenge required",
+          "ruleId": "TIER",
+          "tier": "T3",
+          "reason": "elevated_risk_score",
+          "retryAfterMs": 750
+        },
+        "detected": true
+      },
+      {
+        "timestamp": "2026-11-10T12:06:16.243Z",
+        "url": "http://localhost:8080/api/transactions/search?q=x%3B%20DROP%20TABLE%20users--",
+        "method": "GET",
+        "statusCode": 403,
+        "tier": "T4",
+        "score": 135,
+        "latencyMs": 15.041083,
+        "body": {
+          "error": "blocked by IDS",
+          "ruleId": "TIER",
+          "tier": "T4",
+          "reason": "critical_risk_score"
+        },
+        "detected": true
+      }
+    ]
+  }
+}
